@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
-<!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -9,447 +8,167 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-57LN8GKW');</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KAI Events | חתונות יעד בחו"ל</title>
-<meta name="description" content="KAI Wedding Planners — הבית שלכם לחתונה בלתי נשכחת מעבר לים. חתונות יעד ביוון, קפריסין, איטליה ובכל העולם.">
+<title>KAI Events | חתונות יעד בחו"ל — יוון, קפריסין, איטליה</title>
+<meta name="description" content="KAI Wedding Planners — הבית שלכם לחתונה בלתי נשכחת מעבר לים. הפקת חתונות יעד ביוון, קפריסין, איטליה ובכל העולם.">
 <link rel="icon" type="image/png" href="logo/logo_clear.png">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Heebo:wght@300;400;500&display=swap" rel="stylesheet">
-
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
-
 :root {
   --dark: #1a1a1a;
-  --gray: #666;
-  --light-gray: #999;
-  --border: #e8e8e8;
+  --gray: #555;
+  --light: #999;
+  --border: #e5e5e5;
   --beige: #f9f8f6;
-  --btn-dark: #2d2d2d;
+  --btn: #2d2d2d;
 }
-
-body {
-  font-family: 'Heebo', sans-serif;
-  color: var(--dark);
-  background: white;
-  direction: rtl;
-  -webkit-font-smoothing: antialiased;
-}
+body { font-family: 'Heebo', sans-serif; color: var(--dark); background: white; direction: rtl; -webkit-font-smoothing: antialiased; }
 
 /* ── HEADER ── */
 header {
-  position: fixed;
-  top: 0; right: 0; left: 0;
-  z-index: 1000;
-  background: white;
-  border-bottom: 1px solid var(--border);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 60px;
-  height: 72px;
+  position: fixed; top: 0; right: 0; left: 0; z-index: 1000;
+  background: white; border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 60px; height: 68px;
 }
-
-.logo {
-  font-family: 'Heebo', sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  letter-spacing: 0.15em;
-  color: var(--dark);
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-nav {
-  display: flex;
-  align-items: center;
-  gap: 48px;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-nav a {
-  font-size: 13px;
-  font-weight: 400;
-  letter-spacing: 0.08em;
-  color: var(--dark);
-  text-decoration: none;
-  text-transform: uppercase;
-  padding-bottom: 4px;
-  border-bottom: 2px solid transparent;
-  transition: border-color 0.2s;
-}
-
+.logo { font-size: 17px; font-weight: 400; letter-spacing: 0.18em; color: var(--dark); text-decoration: none; text-transform: uppercase; }
+nav { display: flex; align-items: center; gap: 44px; position: absolute; left: 50%; transform: translateX(-50%); }
+nav a { font-size: 12px; font-weight: 400; letter-spacing: 0.1em; color: var(--dark); text-decoration: none; text-transform: uppercase; padding-bottom: 3px; border-bottom: 1.5px solid transparent; transition: border-color 0.2s; }
 nav a:hover, nav a.active { border-bottom-color: var(--dark); }
-
-.header-btn {
-  background: var(--btn-dark);
-  color: white;
-  padding: 10px 24px;
-  font-size: 12px;
-  font-weight: 400;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: background 0.2s;
-}
-
+.nav-dropdown { position: relative; }
+.nav-dropdown > a { cursor: pointer; }
+.dropdown-menu { display: none; position: absolute; top: 100%; right: 0; background: white; border: 1px solid var(--border); min-width: 140px; padding: 8px 0; }
+.nav-dropdown:hover .dropdown-menu { display: block; }
+.dropdown-menu a { display: block; padding: 8px 16px; font-size: 12px; letter-spacing: 0.08em; border-bottom: none; color: var(--dark); }
+.dropdown-menu a:hover { background: var(--beige); border-bottom: none; }
+.header-btn { background: var(--btn); color: white; padding: 9px 22px; font-size: 11px; font-weight: 400; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; transition: background 0.2s; }
 .header-btn:hover { background: #111; }
+.mob-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+.mob-toggle span { display: block; width: 22px; height: 1px; background: var(--dark); }
+.mob-nav { display: none; position: fixed; inset: 0; background: white; z-index: 9999; flex-direction: column; align-items: center; justify-content: center; gap: 36px; }
+.mob-nav.open { display: flex; }
+.mob-nav a { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 300; color: var(--dark); text-decoration: none; }
+.mob-close { position: absolute; top: 24px; right: 24px; font-size: 28px; background: none; border: none; cursor: pointer; color: var(--dark); }
 
 /* ── HERO ── */
-.hero {
-  margin-top: 72px;
-  width: 100%;
-  height: calc(100vh - 72px);
-  overflow: hidden;
-}
-
-.hero img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-}
-
-/* ── SECTIONS ── */
-section {
-  padding: 80px 120px;
-}
-
-.section-center { text-align: center; }
-
-h2 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 38px;
-  font-weight: 400;
-  color: var(--dark);
-  margin-bottom: 24px;
-  line-height: 1.3;
-}
-
-.section-text {
-  font-size: 15px;
-  font-weight: 300;
-  color: var(--gray);
-  line-height: 2;
-  max-width: 700px;
-  margin: 0 auto;
-}
+.hero { margin-top: 68px; width: 100%; height: calc(100vh - 68px); overflow: hidden; position: relative; }
+.hero img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
 
 /* ── INTRO ── */
-#intro {
-  background: white;
-  text-align: right;
-}
-
-#intro h2 { text-align: right; }
-#intro .section-text { text-align: right; margin: 0; }
+#intro { padding: 80px 120px; background: white; }
+#intro h2 { font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 400; margin-bottom: 24px; line-height: 1.3; }
+#intro p { font-size: 15px; font-weight: 300; color: var(--gray); line-height: 2; margin-bottom: 14px; max-width: 680px; }
 
 /* FORM */
-.form-inline {
-  display: flex;
-  gap: 12px;
-  margin-top: 40px;
-  align-items: flex-end;
-  flex-wrap: wrap;
-}
-
-.form-inline input {
-  flex: 1;
-  min-width: 200px;
-  border: none;
-  border-bottom: 1px solid var(--dark);
-  padding: 10px 0;
-  font-size: 14px;
-  font-family: 'Heebo', sans-serif;
-  color: var(--dark);
-  background: transparent;
-  outline: none;
-  direction: rtl;
-}
-
-.form-inline input::placeholder { color: var(--light-gray); font-size: 13px; }
-
-.form-submit {
-  background: var(--btn-dark);
-  color: white;
-  border: none;
-  padding: 10px 32px;
-  font-size: 13px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  cursor: pointer;
-  font-family: 'Heebo', sans-serif;
-  transition: background 0.2s;
-}
-
+.form-inline { display: flex; gap: 12px; margin-top: 36px; flex-wrap: wrap; align-items: flex-end; }
+.form-inline input { flex: 1; min-width: 160px; border: none; border-bottom: 1px solid var(--dark); padding: 10px 0; font-size: 14px; font-family: 'Heebo', sans-serif; color: var(--dark); background: transparent; outline: none; direction: rtl; }
+.form-inline input::placeholder { color: var(--light); font-size: 13px; }
+.form-submit { background: var(--btn); color: white; border: none; padding: 10px 32px; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer; font-family: 'Heebo', sans-serif; white-space: nowrap; }
 .form-submit:hover { background: #111; }
 
+/* ── PHOTO GRID ── */
+#photo-grid { padding: 0 120px 60px; background: white; }
+.grid-row { display: flex; gap: 6px; margin-bottom: 6px; }
+.grid-row img { object-fit: cover; height: 220px; flex: 1; display: block; }
+.grid-row img.tall { height: 340px; }
+.grid-row img:hover { opacity: 0.93; transition: opacity 0.3s; }
+
 /* ── SERVICES ── */
-#services { background: var(--beige); }
+#services { padding: 80px 120px; background: var(--beige); }
+#services h2 { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 400; text-align: center; margin-bottom: 12px; letter-spacing: 0.05em; }
+#services > p { text-align: center; font-size: 14px; color: var(--gray); font-weight: 300; margin-bottom: 60px; }
+.services-list { display: flex; flex-direction: column; gap: 0; }
+.service-row { display: grid; grid-template-columns: 1fr 140px; gap: 40px; align-items: start; padding: 32px 0; border-bottom: 1px solid var(--border); }
+.service-row:last-child { border-bottom: none; }
+.service-row h3 { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 400; margin-bottom: 10px; }
+.service-row p { font-size: 14px; font-weight: 300; color: var(--gray); line-height: 1.9; }
+.service-row img { width: 140px; height: 200px; object-fit: cover; }
 
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 60px;
-  margin-top: 60px;
-  text-align: right;
-}
-
-.service-item h3 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 22px;
-  font-weight: 400;
-  margin-bottom: 14px;
-  color: var(--dark);
-}
-
-.service-item p {
-  font-size: 14px;
-  font-weight: 300;
-  color: var(--gray);
-  line-height: 1.9;
-}
-
-/* ── GALLERY SECTION ── */
-#gallery-section {
-  background: white;
-  padding: 80px 120px;
-}
-
-.gallery-section-header {
-  text-align: right;
-  margin-bottom: 48px;
-}
-
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 3px;
-}
-
-.gallery-item {
-  position: relative;
-  overflow: hidden;
-  aspect-ratio: 3/4;
-  background: #f0f0f0;
-}
-
-.gallery-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.6s ease;
-  display: block;
-}
-
-.gallery-item:hover img { transform: scale(1.04); }
-
-.gallery-item-label {
-  position: absolute;
-  bottom: 0; right: 0; left: 0;
-  padding: 20px;
-  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
-  color: white;
-  text-align: right;
-}
-
-.gallery-item-label .couple {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 18px;
-  font-weight: 400;
-  display: block;
-  margin-bottom: 2px;
-}
-
-.gallery-item-label .location {
-  font-size: 12px;
-  font-weight: 300;
-  opacity: 0.8;
-  letter-spacing: 0.05em;
-}
-
-.gallery-more {
-  text-align: center;
-  margin-top: 48px;
-}
-
-.btn-outline {
-  display: inline-block;
-  padding: 12px 36px;
-  border: 1px solid var(--dark);
-  font-size: 12px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--dark);
-  text-decoration: none;
-  transition: all 0.2s;
-}
-
+/* ── GALLERY ── */
+#gallery-section { padding: 80px 120px; background: white; }
+#gallery-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 400; margin-bottom: 16px; }
+#gallery-section > p { font-size: 14px; color: var(--gray); font-weight: 300; line-height: 1.9; margin-bottom: 48px; max-width: 600px; }
+.couples-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+.couple-item { position: relative; overflow: hidden; cursor: pointer; }
+.couple-item img { width: 100%; aspect-ratio: 9/16; object-fit: cover; display: block; transition: transform 0.6s ease; }
+.couple-item:hover img { transform: scale(1.04); }
+.couple-label { position: absolute; bottom: 0; right: 0; left: 0; padding: 16px 14px; background: linear-gradient(to top, rgba(0,0,0,0.65), transparent); color: white; text-align: right; }
+.couple-label strong { font-family: 'Cormorant Garamond', serif; font-size: 16px; font-weight: 400; display: block; margin-bottom: 2px; }
+.couple-label span { font-size: 11px; font-weight: 300; opacity: 0.8; }
+.gallery-more { text-align: center; margin-top: 40px; }
+.btn-outline { display: inline-block; padding: 11px 36px; border: 1px solid var(--dark); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--dark); text-decoration: none; transition: all 0.2s; }
 .btn-outline:hover { background: var(--dark); color: white; }
 
 /* ── ABOUT ── */
-#about {
-  background: white;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: start;
-  padding: 80px 120px;
-}
-
-#about img {
-  width: 100%;
-  aspect-ratio: 3/4;
-  object-fit: cover;
-}
-
-.about-text h2 { text-align: right; }
-
-.about-text p {
-  font-size: 15px;
-  font-weight: 300;
-  color: var(--gray);
-  line-height: 2;
-  margin-bottom: 20px;
-}
+#about { padding: 80px 120px; background: white; }
+#about h2 { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 400; margin-bottom: 32px; letter-spacing: 0.05em; }
+.about-img-wide { width: 100%; height: 400px; object-fit: cover; margin-bottom: 48px; display: block; }
+.about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+.about-col p { font-size: 14px; font-weight: 300; color: var(--gray); line-height: 2; margin-bottom: 16px; }
 
 /* ── INSTAGRAM ── */
-#instagram {
-  background: var(--beige);
-  text-align: center;
-  padding: 60px 120px;
-}
+#instagram { padding: 60px 120px; background: var(--beige); text-align: center; }
+#instagram .insta-label { font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--light); margin-bottom: 8px; }
+#instagram a.insta-handle { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 300; color: var(--dark); text-decoration: none; display: block; margin-bottom: 32px; }
+#instagram a.insta-handle:hover { opacity: 0.7; }
+.insta-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px; max-width: 900px; margin: 0 auto; }
+.insta-grid a { display: block; aspect-ratio: 1; overflow: hidden; }
+.insta-grid img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
+.insta-grid a:hover img { transform: scale(1.05); }
 
-#instagram p {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 22px;
-  font-weight: 300;
-  color: var(--gray);
-  margin-bottom: 8px;
+/* ── CONTACT ── */
+#contact { padding: 80px 120px; background: white; }
+#contact h2 { font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 300; font-style: italic; text-align: center; margin-bottom: 48px; }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+.contact-form { display: flex; flex-direction: column; gap: 20px; }
+.contact-form input, .contact-form textarea {
+  border: none; border-bottom: 1px solid var(--dark);
+  padding: 10px 0; font-size: 14px; font-family: 'Heebo', sans-serif;
+  color: var(--dark); background: transparent; outline: none; direction: rtl;
+  width: 100%;
 }
-
-#instagram a {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 28px;
-  font-weight: 400;
-  color: var(--dark);
-  text-decoration: none;
-  letter-spacing: 0.05em;
-}
-
-#instagram a:hover { opacity: 0.7; }
+.contact-form input::placeholder, .contact-form textarea::placeholder { color: var(--light); font-size: 13px; }
+.contact-form textarea { resize: none; height: 80px; }
+.contact-form button { background: var(--btn); color: white; border: none; padding: 12px 36px; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; cursor: pointer; font-family: 'Heebo', sans-serif; align-self: flex-start; margin-top: 8px; }
+.contact-form button:hover { background: #111; }
+.contact-info h3 { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 400; margin-bottom: 8px; }
+.contact-info p { font-size: 14px; color: var(--gray); font-weight: 300; line-height: 1.8; margin-bottom: 24px; }
+.contact-details { font-size: 13px; color: var(--gray); line-height: 2.2; }
+.contact-icons { display: flex; gap: 16px; margin-top: 24px; }
+.contact-icon { width: 38px; height: 38px; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; text-decoration: none; color: var(--dark); transition: all 0.2s; }
+.contact-icon:hover { background: var(--dark); color: white; }
+.contact-icon svg { width: 18px; height: 18px; }
 
 /* ── FOOTER ── */
-footer {
-  background: white;
-  border-top: 1px solid var(--border);
-  padding: 32px 120px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.footer-logo {
-  font-size: 14px;
-  font-weight: 400;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--dark);
-}
-
-.footer-copy {
-  font-size: 12px;
-  color: var(--light-gray);
-}
+footer { background: white; border-top: 1px solid var(--border); padding: 28px 120px; display: flex; justify-content: space-between; align-items: center; }
+.footer-logo { font-size: 13px; font-weight: 400; letter-spacing: 0.18em; text-transform: uppercase; color: var(--dark); }
+.footer-copy { font-size: 11px; color: var(--light); }
 
 /* ── WA FLOAT ── */
-.wa-float {
-  position: fixed;
-  bottom: 28px;
-  left: 28px;
-  width: 52px;
-  height: 52px;
-  background: #25d366;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 999;
-  text-decoration: none;
-  box-shadow: 0 4px 16px rgba(37,211,102,0.35);
-  transition: transform 0.2s;
-}
-
+.wa-float { position: fixed; bottom: 28px; left: 28px; width: 50px; height: 50px; background: #25d366; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 999; text-decoration: none; box-shadow: 0 4px 14px rgba(37,211,102,0.35); transition: transform 0.2s; }
 .wa-float:hover { transform: scale(1.08); }
-.wa-float svg { width: 26px; height: 26px; fill: white; }
+.wa-float svg { width: 25px; height: 25px; fill: white; }
+
+/* ── REVEAL ── */
+.reveal { opacity: 0; transform: translateY(20px); transition: all 0.7s ease; }
+.reveal.active { opacity: 1; transform: translateY(0); }
 
 /* ── MOBILE ── */
-.mob-toggle {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-  background: none;
-  border: none;
-  padding: 6px;
-}
-
-.mob-toggle span {
-  display: block;
-  width: 22px;
-  height: 1px;
-  background: var(--dark);
-}
-
-.mob-nav {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: white;
-  z-index: 9999;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 36px;
-}
-
-.mob-nav.open { display: flex; }
-
-.mob-nav a {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 28px;
-  font-weight: 300;
-  color: var(--dark);
-  text-decoration: none;
-  letter-spacing: 0.05em;
-}
-
-.mob-close {
-  position: absolute;
-  top: 28px;
-  right: 28px;
-  font-size: 28px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: var(--dark);
-  line-height: 1;
-}
-
 @media (max-width: 900px) {
-  header { padding: 0 24px; }
+  header { padding: 0 20px; }
   nav { display: none; }
   .mob-toggle { display: flex; }
-
-  section, #gallery-section, #about, #instagram, footer {
-    padding: 60px 24px;
-  }
-
-  .services-grid { grid-template-columns: 1fr; gap: 36px; }
-  .gallery-grid { grid-template-columns: 1fr 1fr; }
-  #about { grid-template-columns: 1fr; gap: 36px; }
-  #about img { aspect-ratio: 4/3; }
+  #intro, #photo-grid, #services, #gallery-section, #about, #instagram, #contact, footer { padding: 48px 20px; }
+  .grid-row { flex-wrap: wrap; }
+  .grid-row img { height: 160px; min-width: 45%; }
+  .service-row { grid-template-columns: 1fr; }
+  .service-row img { width: 100%; height: 200px; }
+  .couples-grid { grid-template-columns: repeat(2, 1fr); }
+  .about-img-wide { height: 260px; }
+  .about-content { grid-template-columns: 1fr; gap: 0; }
+  .insta-grid { grid-template-columns: repeat(3, 1fr); }
+  .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+  footer { flex-direction: column; gap: 10px; align-items: flex-start; }
 }
 </style>
 </head>
@@ -462,10 +181,17 @@ footer {
   <nav>
     <a href="index.html" class="active">HOME</a>
     <a href="gallery.html">GALLERIES</a>
-    <a href="destinations.html">LOCATIONS</a>
-    <a href="contact.html">CONTACT</a>
+    <div class="nav-dropdown">
+      <a href="#">LOCATIONS</a>
+      <div class="dropdown-menu">
+        <a href="destinations.html#greece">יוון</a>
+        <a href="destinations.html#cyprus">קפריסין</a>
+        <a href="destinations.html#italy">איטליה</a>
+      </div>
+    </div>
+    <a href="#contact">CONTACT</a>
   </nav>
-  <a href="contact.html" class="header-btn">CONTACT US</a>
+  <a href="#contact" class="header-btn">CONTACT US</a>
   <button class="mob-toggle" onclick="document.getElementById('mobNav').classList.add('open')">
     <span></span><span></span><span></span>
   </button>
@@ -474,29 +200,27 @@ footer {
 <!-- MOBILE NAV -->
 <div class="mob-nav" id="mobNav">
   <button class="mob-close" onclick="document.getElementById('mobNav').classList.remove('open')">✕</button>
-  <a href="index.html" onclick="document.getElementById('mobNav').classList.remove('open')">HOME</a>
-  <a href="gallery.html" onclick="document.getElementById('mobNav').classList.remove('open')">GALLERIES</a>
-  <a href="destinations.html" onclick="document.getElementById('mobNav').classList.remove('open')">LOCATIONS</a>
-  <a href="contact.html" onclick="document.getElementById('mobNav').classList.remove('open')">CONTACT</a>
+  <a href="index.html">HOME</a>
+  <a href="gallery.html">GALLERIES</a>
+  <a href="destinations.html">LOCATIONS</a>
+  <a href="#contact">CONTACT</a>
 </div>
 
 <!-- HERO -->
 <div class="hero">
-  <img src="hero.png" alt="חתונת יעד בחו&quot;ל">
+  <img src="hero.png" alt="חתונת יעד בחו&quot;ל — KAI Events">
 </div>
 
 <!-- INTRO -->
 <section id="intro">
   <h2>?חולמים על חתונה מושלמת בחו"ל</h2>
-  <p class="section-text">
-    ברוכים הבאים ל-KAI WEDDING PLANNERS הבית שלכם לחתונה בלתי נשכחת מעבר לים.
-    <br><br>
-    אנו מתמחים בהפקת חתונות בלתי נשכחות ביוון, קפריסין, איטליה, צרפת ובכל מקום בעולם שבו אתם חולמים לחגוג את האהבה שלכם.
-    <br><br>
-    עם ניסיון עשיר בתחום האירועים מסביב לעולם, אנו נלווה אתכם ונעניק לכם את כל הכלים הדרושים להפקת חופשת חתונה מושלמת — החל מבחירת המלון, דרך עיצוב ייחודי ועד בחירת הספקים.
-  </p>
-
-  <form class="form-inline" id="mainForm">
+  <p>ברוכים הבאים ל-KAI WEDDING PLANNERS הבית שלכם לחתונה בלתי נשכחת מעבר לים.</p>
+  <p>אנו מתמחים בהפקת חתונות בלתי נשכחות ביוון, קפריסין, איטליה, צרפת ובכל מקום בעולם שבו אתם חולמים לחגוג את האהבה שלכם.</p>
+  <p>עם ניסיון עשיר בתחום האירועים מסביב לעולם, אנו נלווה אתכם ונעניק לכם את כל הכלים הדרושים להפקת חופשת חתונה מושלמת — החל מבחירת המלון, דרך עיצוב ייחודי ועד בחירת הספקים.</p>
+  <p>עם רקע מקומי וניסיון רב, נוודא שהכל יתנהל בצורה חלקה ושהאורחים שלכם יהנו מחוויה ייחודית בסביבה עוצרת נשימה.</p>
+  <p>בואו נצא יחד למסע המרגש הזה ונגשים את חלום החתונה שלכם ביעד המושלם!</p>
+  <p style="font-size:14px; color:var(--light); margin-top:8px;">רוצים לשמוע עוד פרטים? השאירו פרטים ונחזור אליכם בהקדם:</p>
+  <form class="form-inline" id="introForm">
     <input type="text" name="name" placeholder="שם מלא" required>
     <input type="tel" name="phone" placeholder="טלפון" required>
     <input type="email" name="email" placeholder="אימייל">
@@ -504,95 +228,186 @@ footer {
   </form>
 </section>
 
+<!-- PHOTO GRID -->
+<section id="photo-grid" class="reveal">
+  <div class="grid-row">
+    <img src="pictures/GALLERY/GALLERY(1).jpg" alt="">
+    <img src="pictures/GALLERY/GALLERY(2).jpg" alt="" style="flex:1.4">
+    <img src="pictures/GALLERY/GALLERY(3).jpg" alt="">
+    <img src="pictures/GALLERY2/1.jpg" alt="">
+  </div>
+  <div class="grid-row">
+    <img src="pictures/GALLERY2/2.jpg" alt="" style="flex:1.3">
+    <img src="pictures/GALLERY2/3.jpg" alt="">
+    <img src="pictures/GALLERY2/4.jpg" alt="" style="flex:1.2">
+  </div>
+  <div class="grid-row">
+    <img src="pictures/GALLERY2/5.JPG" alt="">
+    <img src="pictures/GALLERY2/6.jpg" alt="" style="flex:1.5">
+    <img src="pictures/GALLERY2/7.jpg" alt="">
+    <img src="pictures/GALLERY2/8.png" alt="">
+    <img src="pictures/GALLERY2/9.jpg" alt="">
+  </div>
+</section>
+
 <!-- SERVICES -->
-<section id="services">
-  <h2 class="section-center">השירותים שאנו מציעים</h2>
-  <p class="section-text" style="text-align:center; margin-bottom:0;">
-    ב-KAI WEDDING PLANNERS, אנו מתמחים בתכנון חופשות חתונה חלומיות בכל רחבי העולם.
-  </p>
-  <div class="services-grid">
-    <div class="service-item">
-      <h3>טקס חתונה</h3>
-      <p>אנו ערוכים לתת מענה לכל טקס שתבחרו — דתי, אזרחי, רפורמי או סימלי. נסייע לכם להבין את הדרישות המקומיות ונדאג לכל הרישיונות הנדרשים.</p>
+<section id="services" class="reveal">
+  <h2>השירותים שאנו מציעים</h2>
+  <p>ב-KAI WEDDING PLANNERS, אנו מתמחים בתכנון חופשות חתונה חלומיות בכל רחבי העולם. צוות המומחים שלנו כאן כדי להגשים את החלום שלכם.</p>
+  <div class="services-list">
+    <div class="service-row">
+      <div>
+        <h3>טקס חתונה</h3>
+        <p>אנו ערוכים לתת מענה לכל טקס שתבחרו — דתי, אזרחי, רפורמי או סימלי. נסייע לכם להבין את הדרישות המקומיות ונדאג לכל הרישיונות הנדרשים כך שתוכלו להתמקד בהכנות לחתונה שלכם.</p>
+      </div>
+      <img src="pictures/GALLERY/GALLERY(1).jpg" alt="טקס חתונה">
     </div>
-    <div class="service-item">
-      <h3>ספקים</h3>
-      <p>עם קשרים טובים שנרקמו לאורך השנים נוכל להמליץ על ספקים איכותיים — קייטרינג, עיצוב, צלמים, איפור ושיער, מוסיקה חיה ועוד.</p>
+    <div class="service-row">
+      <div>
+        <h3>ספקים</h3>
+        <p>עם קשרים טובים שנרקמו לאורך השנים נוכל להמליץ לכם על ספקים איכותיים — קייטרינג ברמה גבוהה, מיתוג ועיצוב, צלמים מוכשרים, איפור ושיער, מוסיקה חיה ועוד.</p>
+      </div>
+      <img src="pictures/GALLERY/GALLERY(2).jpg" alt="ספקים">
     </div>
-    <div class="service-item">
-      <h3>מלונות</h3>
-      <p>אנו מציעים מגוון אפשרויות של מלונות מרהיבים ביוון, קפריסין ובמגוון יעדים נוספים. חוף הים, טבע, הרים — נמצא את המקום המושלם עבורכם.</p>
+    <div class="service-row">
+      <div>
+        <h3>מלונות</h3>
+        <p>אנו מציעים מגוון אפשרויות של מלונות מרהיבים ביוון, קפריסין ובמגוון יעדים נוספים. בין אם אתם חולמים על חתונה על חוף הים, מלון מוקף בטבע — נמצא את המקום המושלם.</p>
+      </div>
+      <img src="pictures/GALLERY/GALLERY(3).jpg" alt="מלונות">
     </div>
-    <div class="service-item">
-      <h3>הפקה בפועל</h3>
-      <p>במהלך חופשת החתונה, הצוות המקצועי שלנו יהיה נוכח לכל אורך החופשה — כדי שיום החתונה שלכם יהיה חוויה בלתי נשכחת.</p>
+    <div class="service-row">
+      <div>
+        <h3>הפקה בפועל</h3>
+        <p>במהלך חופשת החתונה, הצוות המקצועי שלנו יהיה נוכח לכל אורך החופשה — כדי להבטיח שיום החתונה שלכם יהיה חוויה בלתי נשכחת ואתם תוכלו ליהנות מכל רגע.</p>
+      </div>
+      <img src="pictures/GALLERY2/1.jpg" alt="הפקה">
     </div>
-    <div class="service-item">
-      <h3>כשרות</h3>
-      <p>אנו ערוכים לתת פתרונות לחתונות כשרות — נדאג לכל הפרטים הקולינריים, כולל בחירת ספקי מזון כשרים והקפדה על כל הדרישות.</p>
-    </div>
-    <div class="service-item">
-      <h3>לוגיסטיקה ואורחים</h3>
-      <p>ניהול מלא של לוח הזמנים, הסעות, לינה ולוגיסטיקת אורחים — הכל מתואם ומנוהל על ידינו לגמרי.</p>
+    <div class="service-row">
+      <div>
+        <h3>כשרות</h3>
+        <p>אנו ערוכים לתת פתרונות לחתונות כשרות — נדאג לכל הפרטים הקולינריים, כולל בחירת ספקי מזון כשרים והקפדה על כל הדרישות ההלכתיות.</p>
+      </div>
+      <img src="pictures/GALLERY2/2.jpg" alt="כשרות">
     </div>
   </div>
 </section>
 
 <!-- GALLERY -->
-<section id="gallery-section">
-  <div class="gallery-section-header">
-    <h2>מחפשים השראה לחתונה המושלמת?</h2>
-    <p class="section-text" style="margin:0; text-align:right;">
-      בגלריות שלנו תמצאו את הרגעים המרגשים והמיוחדים ביותר שיצרנו עבור הזוגות שלנו.
-    </p>
+<section id="gallery-section" class="reveal">
+  <h2>מחפשים השראה לחתונה המושלמת?</h2>
+  <p>בגלריות שלנו תמצאו את הרגעים המרגשים והמיוחדים ביותר שיצרנו עבור הזוגות שלנו. תמונות מחתונות ביוון, קפריסין, איטליה ובמגוון יעדים קסומים.</p>
+  <div class="couples-grid">
+    <div class="couple-item">
+      <img src="pictures/GALLERY/GALLERY(1).jpg" alt="OSHER & NETANEL">
+      <div class="couple-label"><strong>OSHER &amp; NETANEL</strong><span>יוון</span></div>
+    </div>
+    <div class="couple-item">
+      <img src="pictures/GALLERY/GALLERY(2).jpg" alt="MICHAL & ILAN">
+      <div class="couple-label"><strong>MICHAL &amp; ILAN</strong><span>קפריסין</span></div>
+    </div>
+    <div class="couple-item">
+      <img src="pictures/GALLERY/GALLERY(3).jpg" alt="LORENE & AMIR">
+      <div class="couple-label"><strong>LORENE &amp; AMIR</strong><span>טוסקנה</span></div>
+    </div>
+    <div class="couple-item">
+      <img src="pictures/GALLERY2/3.jpg" alt="DIANA & IDAN">
+      <div class="couple-label"><strong>DIANA &amp; IDAN</strong><span>קפריסין</span></div>
+    </div>
+    <div class="couple-item">
+      <img src="pictures/GALLERY2/4.jpg" alt="BETTY & BARAK">
+      <div class="couple-label"><strong>BETTY &amp; BARAK</strong><span>קפריסין</span></div>
+    </div>
+    <div class="couple-item">
+      <img src="pictures/GALLERY2/5.JPG" alt="TAMAR & AMIT">
+      <div class="couple-label"><strong>TAMAR &amp; AMIT</strong><span>צרפת</span></div>
+    </div>
+    <div class="couple-item">
+      <img src="pictures/GALLERY2/6.jpg" alt="TALYA & NOAM">
+      <div class="couple-label"><strong>TALYA &amp; NOAM</strong><span>קפריסין</span></div>
+    </div>
+    <div class="couple-item">
+      <img src="pictures/GALLERY2/7.jpg" alt="GAL & ADAR">
+      <div class="couple-label"><strong>GAL &amp; ADAR</strong><span>ישראל</span></div>
+    </div>
   </div>
-
-  <div class="gallery-grid">
-    <div class="gallery-item">
-      <img src="pictures/GALLERY/GALLERY(1).jpg" alt="חתונה ביוון">
-      <div class="gallery-item-label">
-        <span class="couple">OSHER &amp; NETANEL</span>
-        <span class="location">יוון</span>
-      </div>
-    </div>
-    <div class="gallery-item">
-      <img src="pictures/GALLERY/GALLERY(2).jpg" alt="חתונה בקפריסין">
-      <div class="gallery-item-label">
-        <span class="couple">MICHAL &amp; ILAN</span>
-        <span class="location">קפריסין</span>
-      </div>
-    </div>
-    <div class="gallery-item">
-      <img src="pictures/GALLERY/GALLERY(3).jpg" alt="חתונת יעד">
-      <div class="gallery-item-label">
-        <span class="couple">MAYA &amp; RON</span>
-        <span class="location">איטליה</span>
-      </div>
-    </div>
-  </div>
-
   <div class="gallery-more">
     <a href="gallery.html" class="btn-outline">גלריות נוספות</a>
   </div>
 </section>
 
 <!-- ABOUT -->
-<section id="about">
-  <img src="about_me.jpg" alt="נועם סלח — KAI Wedding Planners">
-  <div class="about-text">
-    <h2>חתונה מעבר לים</h2>
-    <p>נשמח לספר את הסיפור האישי שלכם ולהכיר אתכם לעומק — ליצור בסיס לשיתוף פעולה מלא וליווי צמוד ואישי לכל אורך הדרך.</p>
-    <p>הדרך המשותפת תתחיל בהכרות בה נלמד על החלומות שלכם, העדפותיכם, סגנון האירוע, מספר האורחים, הגדרת תקציב ועוד.</p>
-    <p>בהמשך, נוכל להמליץ לכם על מספר יעדים ולוקיישנים שיענו על הציפיות שלכם. יחד נהפוך חלום למציאות.</p>
-    <p>המטרה העיקרית שאנו רואים לנגד עינינו היא יצירת אירוע מותאם אישית המביא לידי ביטוי את טעמם, סגנונם ואישיותם של לקוחותינו.</p>
-    <p>אנחנו מזמינים אתכם להגיד כן בחתונה בלתי נשכחת בלוקיישן אקזוטי מעבר לים.</p>
+<section id="about" class="reveal">
+  <h2>חתונה מעבר לים</h2>
+  <img src="pictures/GALLERY2/10.jpg" alt="חתונת יעד" class="about-img-wide">
+  <div class="about-content">
+    <div class="about-col">
+      <p>נשמח לספר את הסיפור האישי שלכם ולהכיר אתכם לעומק — ליצור בסיס לשיתוף פעולה מלא וליווי צמוד ואישי לכל אורך הדרך.</p>
+      <p>הדרך המשותפת תתחיל בהכרות בה נלמד על החלומות שלכם, העדפותיכם, סגנון האירוע, מספר האורחים, הגדרת תקציב ועוד.</p>
+      <p>בהמשך, נוכל להמליץ לכם על מספר יעדים ולוקיישנים שיענו על הציפיות שלכם. יחד נהפוך חלום למציאות.</p>
+    </div>
+    <div class="about-col">
+      <p>השירות אותו אנו מציעים הוא שירות מלא מא' ועד ת' — ולשם כך מלווים אותנו בכל יעד צוות מקצועי מקומי שנבחר על ידינו בקפידה.</p>
+      <p>המטרה העיקרית שאנו רואים לנגד עינינו היא יצירת אירוע מותאם אישית המביא לידי ביטוי את טעמם, סגנונם ואישיותם של לקוחותינו.</p>
+      <p>אנחנו מזמינים אתכם להגיד כן בחתונה בלתי נשכחת בלוקיישן אקזוטי מעבר לים.</p>
+    </div>
   </div>
 </section>
 
 <!-- INSTAGRAM -->
-<section id="instagram">
-  <p>FOLLOW US ON INSTAGRAM</p>
-  <a href="https://instagram.com/kai_wedding_planners" target="_blank">@Kai_wedding_planners</a>
+<section id="instagram" class="reveal">
+  <p class="insta-label">FOLLOW US ON INSTAGRAM</p>
+  <a href="https://instagram.com/kai_wedding_planners" target="_blank" class="insta-handle">@Kai_wedding_planners</a>
+  <div class="insta-grid">
+    <a href="https://instagram.com/kai_wedding_planners" target="_blank">
+      <img src="pictures/GALLERY/GALLERY(1).jpg" alt="Instagram KAI Events">
+    </a>
+    <a href="https://instagram.com/kai_wedding_planners" target="_blank">
+      <img src="pictures/GALLERY/GALLERY(2).jpg" alt="Instagram KAI Events">
+    </a>
+    <a href="https://instagram.com/kai_wedding_planners" target="_blank">
+      <img src="pictures/GALLERY/GALLERY(3).jpg" alt="Instagram KAI Events">
+    </a>
+    <a href="https://instagram.com/kai_wedding_planners" target="_blank">
+      <img src="pictures/GALLERY2/1.jpg" alt="Instagram KAI Events">
+    </a>
+    <a href="https://instagram.com/kai_wedding_planners" target="_blank">
+      <img src="pictures/GALLERY2/2.jpg" alt="Instagram KAI Events">
+    </a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="reveal">
+  <h2>Lets talk</h2>
+  <div class="contact-grid">
+    <form class="contact-form" id="mainForm">
+      <input type="text" name="name" placeholder="שם מלא" required>
+      <input type="email" name="email" placeholder="אימייל" required>
+      <input type="tel" name="phone" placeholder="טלפון">
+      <textarea name="message" placeholder="ספרו לנו על החלום שלכם..."></textarea>
+      <button type="submit">SEND</button>
+    </form>
+    <div class="contact-info">
+      <h3>CONTACT</h3>
+      <div class="contact-details">
+        <p>Kaiwedd1@gmail.com</p>
+        <p>Tel: +972-528344374</p>
+        <p>Tel-Aviv, Israel</p>
+      </div>
+      <div class="contact-icons">
+        <a href="https://instagram.com/kai_wedding_planners" target="_blank" class="contact-icon" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="https://wa.me/972528344374" target="_blank" class="contact-icon" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.532 5.862L.057 23.428a.5.5 0 00.609.61l5.7-1.495A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.9a9.9 9.9 0 01-5.031-1.371l-.36-.214-3.733.979.999-3.648-.235-.374A9.861 9.861 0 012.1 12C2.1 6.533 6.533 2.1 12 2.1c5.467 0 9.9 4.433 9.9 9.9 0 5.467-4.433 9.9-9.9 9.9z"/></svg>
+        </a>
+        <a href="mailto:htnoam@gmail.com" class="contact-icon" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- FOOTER -->
@@ -607,15 +422,26 @@ footer {
 </a>
 
 <script>
-document.getElementById('mainForm').addEventListener('submit', async function(e) {
-  e.preventDefault();
-  try {
-    await fetch('https://formspree.io/f/mgopvjoy', {
-      method: 'POST', body: new FormData(this), headers: {Accept: 'application/json'}
-    });
-  } catch(err) {}
-  window.location.href = 'thank-you.html';
-});
+// Reveal on scroll
+const obs = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting) x.target.classList.add('active'); }), {threshold: 0.08});
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+// Form submit
+async function submitForm(formId) {
+  const form = document.getElementById(formId);
+  if (!form) return;
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    try {
+      await fetch('https://formspree.io/f/mgopvjoy', {
+        method: 'POST', body: new FormData(this), headers: {Accept: 'application/json'}
+      });
+    } catch(err) {}
+    window.location.href = 'thank-you.html';
+  });
+}
+submitForm('introForm');
+submitForm('mainForm');
 </script>
 </body>
 </html>
