@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-57LN8GKW');</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>צור קשר | KAI Events | KAI Events</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Heebo:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="logo/logo_clear.png">
+<style>/* ── SHARED STYLES FOR ALL PAGES ── */
+:root {
+  --gold: #a19273;
+  --gold-hover: #8e7f5e;
+  --beige: #F7F5F2;
+  --dark: #1a1a1a;
+  --gray: #666;
+  --border: #e8e4de;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Heebo', sans-serif;
+  background: var(--beige);
+  color: var(--dark);
+  direction: rtl;
+  -webkit-font-smoothing: antialiased;
+}
+
+.serif { font-family: 'Playfair Display', serif; }
+
+/* HEADER */
+header {
+  position: fixed;
+  top: 0; right: 0; left: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 60px;
+  transition: all 0.4s ease;
+}
+
+header.scrolled {
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(12px);
+  padding: 14px 60px;
+  box-shadow: 0 1px 20px rgba(0,0,0,0.06);
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  color: white;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  transition: color 0.3s;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.logo span { display: block; font-size: 11px; letter-spacing: 0.2em; opacity: 0.7; font-family: 'Heebo', sans-serif; font-weight: 300; }
+header.scrolled .logo { color: var(--dark); }
+
+nav { display: flex; gap: 32px; list-style: none; align-items: center; }
+nav a {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+nav a:hover, nav a.active { color: white; }
+header.scrolled nav a { color: var(--gray); }
+header.scrolled nav a:hover, header.scrolled nav a.active { color: var(--dark); }
+
+.nav-cta {
+  background: var(--gold);
+  color: white !important;
+  padding: 9px 20px;
+  border-radius: 3px;
+  transition: background 0.2s !important;
+}
+.nav-cta:hover { background: var(--gold-hover) !important; color: white !important; }
+
+/* MOBILE NAV */
+.mob-nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 4px;
+}
+.mob-nav-toggle span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: white;
+  transition: all 0.3s;
+}
+header.scrolled .mob-nav-toggle span { background: var(--dark); }
+
+.mob-nav {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: white;
+  z-index: 999;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+.mob-nav.open { display: flex; }
+.mob-nav a {
+  font-size: 22px;
+  font-family: 'Playfair Display', serif;
+  color: var(--dark);
+  text-decoration: none;
+}
+.mob-nav-close {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--dark);
+}
+
+/* SECTION COMMONS */
+.section-eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 400;
+  color: var(--dark);
+  line-height: 1.2;
+}
+
+/* BUTTONS */
+.btn-gold {
+  background: var(--gold);
+  color: white;
+  padding: 15px 36px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s;
+  font-family: 'Heebo', sans-serif;
+}
+.btn-gold:hover { background: var(--gold-hover); transform: translateY(-2px); }
+
+.btn-outline {
+  color: var(--dark);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-bottom: 1px solid var(--dark);
+  padding-bottom: 2px;
+  transition: all 0.2s;
+}
+.btn-outline:hover { color: var(--gold); border-color: var(--gold); }
+
+/* REVEAL */
+.reveal { opacity: 0; transform: translateY(20px); transition: all 0.7s ease-out; }
+.reveal.active { opacity: 1; transform: translateY(0); }
+
+/* PAGE HERO (non-home) */
+.page-hero {
+  padding: 140px 60px 80px;
+  background: var(--dark);
+  text-align: center;
+  color: white;
+}
+.page-hero .section-title { color: white; font-size: clamp(36px, 5vw, 56px); }
+.page-hero .section-eyebrow { color: rgba(200,169,110,0.9); }
+
+/* FOOTER */
+footer {
+  padding: 40px 60px;
+  background: var(--dark);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.footer-logo { font-family: 'Playfair Display', serif; font-size: 16px; color: rgba(255,255,255,0.4); letter-spacing: 0.1em; }
+.footer-links { display: flex; gap: 24px; list-style: none; }
+.footer-links a { font-size: 12px; color: rgba(255,255,255,0.3); text-decoration: none; transition: color 0.2s; }
+.footer-links a:hover { color: rgba(255,255,255,0.7); }
+
+/* WA FLOAT */
+.wa-float {
+  position: fixed; bottom: 28px; left: 28px;
+  width: 52px; height: 52px;
+  background: #25d366;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  z-index: 999;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(37,211,102,0.4);
+  transition: transform 0.3s;
+}
+.wa-float:hover { transform: scale(1.08); }
+.wa-float svg { width: 26px; height: 26px; fill: white; }
+
+@media (max-width: 768px) {
+  header { padding: 14px 20px; }
+  header.scrolled { padding: 12px 20px; }
+  nav { display: none; }
+  .mob-nav-toggle { display: flex; }
+  .page-hero { padding: 100px 20px 60px; }
+  footer { padding: 28px 20px; flex-direction: column; align-items: flex-start; }
+  .wa-float { bottom: 20px; left: 20px; }
+}
+</style>
+<style>
+#contact-content {
+  min-height: 80vh;
+  padding: 80px 60px;
+  background: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.contact-info { padding: 20px 0; }
+.contact-info h2 { font-family: "Playfair Display", serif; font-size: 38px; font-weight: 400; margin-bottom: 16px; }
+.contact-info p { font-size: 15px; color: var(--gray); line-height: 1.9; margin-bottom: 36px; font-weight: 300; }
+.contact-details { display: flex; flex-direction: column; gap: 20px; }
+.contact-detail { display: flex; gap: 14px; align-items: center; }
+.contact-detail-icon { width: 40px; height: 40px; background: var(--beige); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 16px; }
+.contact-detail-text a { color: var(--dark); text-decoration: none; font-size: 14px; }
+.contact-detail-label { font-size: 11px; color: var(--gray); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 2px; }
+.contact-form-wrap { background: var(--beige); padding: 48px 40px; border-radius: 4px; }
+.form-field { display: flex; flex-direction: column; gap: 7px; margin-bottom: 14px; }
+.form-field label { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray); }
+.form-field input, .form-field select, .form-field textarea { border: 1.5px solid #d8d3cc; padding: 13px 15px; font-size: 14px; font-family: "Heebo", sans-serif; background: white; color: var(--dark); border-radius: 2px; outline: none; transition: border-color 0.3s; direction: rtl; }
+.form-field input:focus, .form-field select:focus, .form-field textarea:focus { border-color: var(--gold); }
+.form-field textarea { resize: vertical; min-height: 100px; }
+.submit-btn { width: 100%; background: var(--gold); color: white; padding: 16px; font-size: 13px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; border: none; border-radius: 3px; cursor: pointer; transition: all 0.3s; font-family: "Heebo", sans-serif; }
+.submit-btn:hover { background: var(--gold-hover); }
+.form-note { text-align: center; font-size: 12px; color: var(--gray); margin-top: 12px; }
+@media (max-width: 768px) { #contact-content { grid-template-columns: 1fr; padding: 40px 20px; gap: 40px; } .contact-form-wrap { padding: 32px 24px; } }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-57LN8GKW" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header id="main-header">
+  <a href="index.html" class="logo">KAI EVENTS<span>מתכנני חתונות יעד</span></a>
+  <nav><a href="index.html">דף הבית</a><a href="destinations.html">יעדים</a><a href="gallery.html">גלריה</a><a href="services.html">שירותים</a><a href="contact.html" class="nav-cta">צור קשר</a></nav>
+  <button class="mob-nav-toggle" onclick="document.getElementById('mobNav').classList.add('open')">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+<div class="mob-nav" id="mobNav">
+  <button class="mob-nav-close" onclick="document.getElementById('mobNav').classList.remove('open')">✕</button>
+  <a href="index.html">דף הבית</a>
+<a href="destinations.html">יעדים</a>
+<a href="gallery.html">גלריה</a>
+<a href="services.html">שירותים</a>
+<a href="contact.html">צור קשר</a>
+
+</div>
+<div class="page-hero">
+  <p class="section-eyebrow">דברו איתנו</p>
+  <h1 class="section-title">שיחת היכרות חינמית</h1>
+</div>
+<div id="contact-content">
+  <div class="contact-info reveal">
+    <h2>בואו נתכנן את<br>החתונה שלכם</h2>
+    <p>ספרו לנו על החזון שלכם — אנחנו נטפל בשאר. שיחה קצרה תעזור לנו להבין מה אתם מחפשים ואיך אנחנו יכולים לעזור.</p>
+    <div class="contact-details">
+      <div class="contact-detail">
+        <div class="contact-detail-icon">📱</div>
+        <div>
+          <div class="contact-detail-label">וואטסאפ</div>
+          <a href="https://wa.me/972528344374">052-8344374</a>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-detail-icon">📧</div>
+        <div>
+          <div class="contact-detail-label">אימייל</div>
+          <a href="mailto:kaiwedd1@gmail.com">kaiwedd1@gmail.com</a>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-detail-icon">📸</div>
+        <div>
+          <div class="contact-detail-label">אינסטגרם</div>
+          <a href="https://instagram.com/kai_wedding_planners" target="_blank">@kai_wedding_planners</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="contact-form-wrap reveal">
+    <form id="mainForm" action="https://formspree.io/f/mgopvjoy" method="POST">
+      <div class="form-field">
+        <label>שם מלא</label>
+        <input type="text" name="name" placeholder="שם ושם משפחה" required>
+      </div>
+      <div class="form-field">
+        <label>טלפון</label>
+        <input type="tel" name="phone" placeholder="050-0000000" required>
+      </div>
+      <div class="form-field">
+        <label>אימייל</label>
+        <input type="email" name="email" placeholder="your@email.com">
+      </div>
+      <div class="form-field">
+        <label>יעד מועדף</label>
+        <select name="destination" required>
+          <option value="" disabled selected>בחרו יעד</option>
+          <option>קפריסין</option>
+          <option>יוון</option>
+          <option>איטליה</option>
+          <option>עדיין לא החלטנו</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <label>מספר אורחים</label>
+        <select name="guests" required>
+          <option value="" disabled selected>כמות אורחים</option>
+          <option>עד 30</option>
+          <option>30–60</option>
+          <option>60–100</option>
+          <option>מעל 100</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <label>ספרו לנו קצת (אופציונלי)</label>
+        <textarea name="message" placeholder="תאריך משוער, חזון, שאלות..."></textarea>
+      </div>
+      <button type="submit" class="submit-btn">שלחו — נחזור תוך 24 שעות</button>
+      <p class="form-note">ללא התחייבות · ייעוץ ראשוני חינמי</p>
+    </form>
+  </div>
+</div>
+<script>
+document.getElementById('mainForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  try { await fetch('https://formspree.io/f/mgopvjoy', {method:'POST', body: new FormData(this), headers:{Accept:'application/json'}}); } catch(err){}
+  window.location.href = 'thank-you.html';
+});
+</script>
+<footer>
+  <div class="footer-logo">KAI EVENTS</div>
+  <ul class="footer-links">
+    <li><a href="https://wa.me/972528344374">וואטסאפ</a></li>
+    <li><a href="https://instagram.com/kai_wedding_planners">אינסטגרם</a></li>
+    <li><a href="contact.html">צור קשר</a></li>
+  </ul>
+</footer>
+<a href="https://wa.me/972528344374" class="wa-float" target="_blank" aria-label="וואטסאפ">
+  <svg viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.1-16.4-14.6-27.4-32.6-30.6-38.1-3.2-5.6-.3-8.6 2.5-11.4 2.5-2.5 5.5-6.5 8.3-9.7 2.8-3.3 3.7-5.6 5.6-9.3 1.9-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.8 23.5 9.2 31.5 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+</a>
+<script>
+const hdr = document.getElementById('main-header');
+window.addEventListener('scroll', () => hdr.classList.toggle('scrolled', window.scrollY > 50));
+const obs = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('active'); }), {threshold: 0.1});
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
