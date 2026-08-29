@@ -1387,7 +1387,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
      HAMBURGER FIX END
      ============================================================ -->
 
-
+<!-- LANGUAGE TOGGLE BUTTON -->
+<div id="langToggle" style="position:fixed;top:12px;left:50%;transform:translateX(-50%);z-index:99999;display:flex;align-items:center;background:rgba(255,255,255,0.18);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.35);border-radius:20px;overflow:hidden;">
+  <button id="btnEN" onclick="setLang('en')" style="padding:5px 14px;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;border:none;background:#a19273;color:white;border-radius:20px;cursor:pointer;">EN</button>
+  <button id="btnHE" onclick="setLang('he')" style="padding:5px 14px;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;border:none;background:transparent;color:rgba(255,255,255,0.8);cursor:pointer;">עב</button>
+</div>
 
 <div id="successOverlay" class="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none transition-all duration-500 z-50">
     <div id="successBox" class="bg-white rounded-2xl px-10 py-12 text-center shadow-2xl transform scale-95 opacity-0 transition-all duration-500">
@@ -1431,14 +1435,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <span class="logo-line-2">KAI EVENTS</span>
     </div>
 
-    <!-- LANGUAGE TOGGLE -->
-    <div id="langToggle" style="display:flex;align-items:center;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);border-radius:20px;overflow:hidden;margin-right:12px;">
-      <button id="btnEN" onclick="setLang('en')" style="padding:5px 12px;font-family:'Montserrat',sans-serif;font-size:10px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;border:none;background:#a19273;color:white;border-radius:20px;cursor:pointer;">EN</button>
-      <button id="btnHE" onclick="setLang('he')" style="padding:5px 12px;font-family:'Montserrat',sans-serif;font-size:10px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;border:none;background:transparent;color:rgba(255,255,255,0.75);cursor:pointer;">עב</button>
-    </div>
-
     <!-- DESKTOP: CTA — kept pixel-perfect, hidden on mobile via CSS -->
-    <a href="#final-contact-section" class="header-cta" data-tid="header-cta">
+    <a href="#final-contact-section" class="header-cta">
         LET'S TALK
     </a>
 
