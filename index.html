@@ -464,6 +464,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             .svc-card-grid { display: none !important; }
         }
 
+        /* ===== NO GAP BETWEEN HERO AND ABOUT ===== */
+        @media (min-width: 769px) {
+            body { background-color: #ffffff; }
+        }
+
         /* ===== COMPACT IMAGE TRIO ===== */
         .trio-grid {
             display: grid;
@@ -1510,6 +1515,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </style>
 
 <!-- ===== FULL EXPERIENCE SECTION (MOBILE ONLY) ===== -->
+<div style="background:white;" class="hidden md:block"></div>
 <div class="block md:hidden hidden mobile-full-exp" style="padding-bottom: 40px;">
     <p class="mobile-full-exp-eyebrow">Beyond Wedding Planning</p>
     <h2 class="mobile-full-exp-title">Complete Destination<br>Experiences</h2>
