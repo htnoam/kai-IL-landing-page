@@ -157,7 +157,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
            height reduced so image is not over-cropped           */
         .hero {
             /* Push the section below the fixed header */
-            margin-top: 50px;
+            margin-top: 0;
             /* Height = viewport minus the header so image fills the rest cleanly */
             height: calc(100vh - 50px);
             background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.3)),
@@ -469,7 +469,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 7px;
-            padding: 28px 20px;
+            padding: 0 20px;
             max-width: 480px;
             margin: 0 auto;
         }
@@ -714,7 +714,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
            natural aspect ratio (949/1431 = 66.3%)
            ===================================================== */
         .mobile-hero-image {
-            margin-top: 50px; /* exactly equals the fixed header height */
+            margin-top: 0; /* exactly equals the fixed header height */
             width: 100%;
             position: relative;
             /* aspect-ratio = height/width of original image: 949/1431 */
@@ -1454,7 +1454,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
      margin-top: 50px  → starts exactly below the fixed header
      height: calc(100vh - 50px) → fills the rest of the viewport
      background-position: center top → image anchored top, not zoomed -->
-<section class="hero hidden md:flex" style="padding-top: 0; margin-top: 0; relative items-center justify-center text-center overflow-hidden">
+<section class="hero hidden md:flex" style="margin-bottom:0; padding-top: 0; margin-top: 0; relative items-center justify-center text-center overflow-hidden">
     <div class="absolute inset-0 bg-black/5 md:bg-black/5 z-0"></div>
     <div class="relative z-10 px-6 max-w-4xl">
 
@@ -1633,7 +1633,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </div>
 
 <!-- ===== ABOUT / DESKTOP ONLY ===== -->
-<section id="about-contact" class="bg-white py-16 md:py-20">
+<section id="about-contact" class="bg-white py-16 md:py-20" style="margin-top:0; padding-top:48px;">
     <div style="max-width: 780px; margin: 0 auto; text-align: center; padding: 0 32px;">
 
         <!-- Eyebrow italic gold -->
@@ -2365,7 +2365,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
 </div>
 
-<section id="final-contact-section" class="relative min-h-[100vh] flex items-start md:items-center justify-center py-[40px] md:py-[70px] md:mt-[40px] overflow-hidden">
+<section id="final-contact-section" class="relative min-h-[100vh] flex items-start md:items-center justify-center py-[40px] md:py-[70px] overflow-hidden">
     <div class="absolute inset-0 z-0">
         <img src="pictures/contact/1.jpg" alt="Wedding Destination" class="w-full h-full object-cover object-center">
         <div class="absolute inset-0 bg-black/25"></div>
