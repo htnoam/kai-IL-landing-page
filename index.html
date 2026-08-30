@@ -2370,7 +2370,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <img src="pictures/contact/1.jpg" alt="Wedding Destination" class="w-full h-full object-cover object-center">
         <div class="absolute inset-0 bg-black/25"></div>
     </div>
-    <div class="relative z-10 w-full max-w-2xl px-4 md:px-6 reveal mt-4 md:mt-0">
+    <div class="relative z-10 w-full max-w-3xl px-4 md:px-6 reveal mt-4 md:mt-0">
         <div class="bg-[#f8f6f2] py-[44px] md:py-[70px] px-[22px] md:px-[60px] shadow-[0_25px_70px_rgba(0,0,0,0.08)] rounded-[6px] text-center border border-white/40">
 
             <p class="text-[10px] tracking-[4px] uppercase text-[#a19273] mb-3">Begin Your Journey</p>
@@ -2383,25 +2383,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
                 Tell us about your vision — we'll take it from there.
             </p>
 
-            <form id="mainForm" class="space-y-[14px] md:space-y-[20px] mb-[24px] md:mb-[40px]">
+            <form id="mainForm" class="mb-[24px] md:mb-[40px]" style="text-align:left;">
                 <input type="hidden" name="_subject" value="New Wedding Lead">
-                <input type="text" name="name" placeholder="Full Name" autocomplete="name" required class="w-full bg-[#ffffff] border border-[#dcdcdc] py-[14px] md:py-[16px] px-[16px] md:px-[18px] rounded-[6px] text-[14px] text-[#1a1a1a] outline-none focus:border-[#000] transition-all duration-300 placeholder:text-[#999]">
-                <input type="email" name="email" placeholder="Email Address" autocomplete="email" required class="w-full bg-[#ffffff] border border-[#dcdcdc] py-[14px] md:py-[16px] px-[16px] md:px-[18px] rounded-[6px] text-[14px] text-[#1a1a1a] outline-none focus:border-[#000] transition-all duration-300 placeholder:text-[#999]">
-                <div style="position: relative;">
-                    <input type="tel" id="phone3" name="phone" placeholder="Phone Number (optional)" autocomplete="tel" class="w-full bg-[#ffffff] border border-[#dcdcdc] py-[14px] md:py-[16px] px-[16px] md:px-[18px] rounded-[6px] text-[14px] text-[#1a1a1a] outline-none focus:border-[#000] transition-all duration-300 placeholder:text-[#999]">
-                    <span style="position: absolute; right: 14px; top: 50%; transform: translateY(-50%); font-size: 10px; color: #ccc; letter-spacing: 0.5px; pointer-events: none;">optional</span>
+                <style>
+                  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+                  .form-row.single { grid-template-columns: 1fr; }
+                  .f-input { width: 100%; background: #fff; border: 1px solid #dcdcdc; padding: 13px 16px; border-radius: 6px; font-size: 14px; color: #1a1a1a; outline: none; transition: border 0.2s; }
+                  .f-input:focus { border-color: #000; }
+                  .f-input::placeholder { color: #999; }
+                  @media (max-width: 768px) { .form-row { grid-template-columns: 1fr; } }
+                </style>
+                <div class="form-row">
+                    <input type="text" name="name" placeholder="Full Name" autocomplete="name" required class="f-input">
+                    <input type="email" name="email" placeholder="Email Address (optional)" autocomplete="email" class="f-input">
                 </div>
-                <input type="number" name="guests" placeholder="Number of guests" min="1" class="w-full bg-[#ffffff] border border-[#dcdcdc] py-[14px] md:py-[16px] px-[16px] md:px-[18px] rounded-[6px] text-[14px] text-[#1a1a1a] outline-none focus:border-[#000] transition-all duration-300 placeholder:text-[#999]">
-                <input type="text" name="destination" placeholder="Destination" class="w-full bg-[#ffffff] border border-[#dcdcdc] py-[14px] md:py-[16px] px-[16px] md:px-[18px] rounded-[6px] text-[14px] text-[#1a1a1a] outline-none focus:border-[#000] transition-all duration-300 placeholder:text-[#999]">
-                <textarea name="message" placeholder="Message" rows="6" class="w-full bg-[#ffffff] border border-[#dcdcdc] py-[14px] md:py-[16px] px-[16px] md:px-[18px] rounded-[6px] text-[14px] text-[#1a1a1a] outline-none focus:border-[#000] transition-all duration-300 placeholder:text-[#999] resize-none"></textarea>
-                <div class="text-left">
-                    <label class="flex items-start gap-2 cursor-pointer">
-                        <input type="checkbox" name="consent" required class="mt-1 accent-[#a19273]">
-                        <span class="text-[11px] md:text-[12px] text-[#888] font-light leading-[1.6]">
-                            I agree to the use of my details for contact and updates in accordance with the
-                            <a href="privacy-policy.html" target="_blank" class="underline text-[#a19273] hover:text-[#000] transition-all">Privacy Policy</a>.
-                        </span>
-                    </label>
+                <div class="form-row">
+                    <input type="tel" name="phone" placeholder="Phone Number" autocomplete="tel" required class="f-input">
+                    <input type="number" name="guests" placeholder="Number of guests" min="1" class="f-input">
+                </div>
+                <div class="form-row single">
+                    <input type="text" name="destination" placeholder="Destination" class="f-input">
+                </div>
+                <div class="form-row single">
+                    <textarea name="message" placeholder="Message" rows="3" class="f-input" style="resize:none;"></textarea>
                 </div>
                 <div class="pt-[4px] md:pt-[10px]">
                     <button type="submit" class="cta-button w-full md:w-auto !text-[12px] !py-[16px] !px-[28px]">
