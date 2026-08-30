@@ -1301,6 +1301,20 @@ function closeMobMenu() {
     </style>
 </head>
 <body>
+<header style="position: fixed; top: 0; left: 0; width: 100%; height: 80px; background: rgba(80, 80, 80, 0.4); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); display: flex; align-items: center; justify-content: space-between; padding: 0 60px; z-index: 1000; border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
+    <div style="font-size: 24px; font-weight: 700; color: white; letter-spacing: 2px;">KAI</div>
+    <nav style="display: flex; gap: 40px;">
+        <a href="index.html" style="color: white; text-decoration: none; font-size: 13px; font-weight: 400;">Home</a>
+        <a href="about.html" style="color: white; text-decoration: none; font-size: 13px; font-weight: 400;">About</a>
+        <a href="destinations.html" style="color: white; text-decoration: none; font-size: 13px; font-weight: 400;">Destinations</a>
+        <a href="gallery.html" style="color: white; text-decoration: none; font-size: 13px; font-weight: 400;">Gallery</a>
+        <a href="services.html" style="color: white; text-decoration: none; font-size: 13px; font-weight: 400;">Services</a>
+        <a href="contact.html" style="color: white; text-decoration: none; font-size: 13px; font-weight: 400;">Contact Us</a>
+    </nav>
+    <a href="https://calendly.com/htnoam/30min" target="_blank" style="color: white; text-decoration: none; font-size: 12px; font-weight: 600; letter-spacing: 1px;">DISCOVERY CALL</a>
+</header>
+
+
 
     <body>
 
@@ -1405,36 +1419,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <!-- ============================================================
      HAMBURGER FIX START — Header with mobile elements injected
      ============================================================ -->
-<header id="main-header" class="header">
 
-    <!-- MOBILE: Hamburger (left) -->
-    <button class="mob-hamburger" id="mobHamburger" aria-label="Open menu">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
-
-    <!-- MOBILE: Centered logo (two lines, visible at top only) -->
-    <div class="mob-logo-center">
-    <span class="logo-line-1">DESTINATION WEDDING PLANNERS</span>
-    <span class="logo-line-2">KAI EVENTS</span>
-</div>
-
-    <!-- MOBILE: CTA (right, appears on scroll) -->
-    <a href="https://calendly.com/htnoam/30min" target="_blank" class="mob-header-cta" onclick="closeMobMenu()">LET'S TALK</a>
-
-    <!-- DESKTOP: Logo — kept pixel-perfect, hidden on mobile via CSS -->
-    <div class="logo-main">
-        <span class="logo-line-1">DESTINATION WEDDING PLANNERS</span>
-        <span class="logo-line-2">KAI EVENTS</span>
-    </div>
-
-    <!-- DESKTOP: CTA — kept pixel-perfect, hidden on mobile via CSS -->
-    <a href="https://calendly.com/htnoam/30min" target="_blank" class="header-cta">
-        LET'S TALK
-    </a>
-
-</header>
 <!-- ============================================================
      HAMBURGER FIX END
      ============================================================ -->
@@ -1444,7 +1429,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 
     <!-- HEADLINE -->
     <h1 style="font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 400; color: #1a1a1a; line-height: 1.2; letter-spacing: -0.3px; margin: 0 0 20px;">
-        Luxury Destination<br>Weddings
+        Luxury Destination Weddings
     </h1>
 
     <!-- SUBTEXT -->
@@ -1469,7 +1454,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
      margin-top: 50px  → starts exactly below the fixed header
      height: calc(100vh - 50px) → fills the rest of the viewport
      background-position: center top → image anchored top, not zoomed -->
-<section class="hero hidden md:flex relative items-center justify-center text-center overflow-hidden">
+<section class="hero hidden md:flex" style="padding-top: 0; margin-top: 0; relative items-center justify-center text-center overflow-hidden">
     <div class="absolute inset-0 bg-black/5 md:bg-black/5 z-0"></div>
     <div class="relative z-10 px-6 max-w-4xl">
 
@@ -1491,15 +1476,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <div class="hidden md:block">
             <p class="text-[11px] tracking-[5px] uppercase text-white/55 mb-6 font-light">Europe & Beyond · Destination Weddings</p>
             <h1 class="font-serif text-[54px] text-white mb-5 leading-[1.15] reveal active" style="letter-spacing: -0.5px;">
-                Bespoke Destination<br>Weddings
+                Luxury Destination Weddings
             </h1>
             <div style="width: 40px; height: 1px; background: rgba(161,146,115,0.7); margin: 0 auto 26px;"></div>
             <p class="text-[15px] text-white/80 font-light mb-10 max-w-[400px] mx-auto leading-[2] reveal active">
                 Every detail handled.<br>Every moment considered.<br>Every wedding, entirely yours.
             </p>
-            <div class="reveal active flex flex-col items-center gap-3">
-                <a href="https://calendly.com/htnoam/30min" target="_blank" class="gold-button !w-auto px-10" style="font-size:11px; letter-spacing: 3px;">Start Planning My Wedding</a>
-                <p style="font-size:10px; color:rgba(255,255,255,0.38); letter-spacing:1.5px; margin-top:4px;">Free consultation</p>
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                    <a href="https://calendly.com/htnoam/30min" target="_blank" style="background: var(--brand-gold); color: white; padding: 14px 40px; border-radius: 30px; font-size: 11px; letter-spacing: 3px; font-weight: 600; text-decoration: none; text-transform: uppercase;">BOOK A DISCOVERY CALL</a>
+                    <a href="https://wa.me/972528344374" target="_blank" style="border: 2px solid white; color: white; padding: 12px 38px; border-radius: 30px; font-size: 11px; letter-spacing: 3px; font-weight: 600; text-decoration: none; text-transform: uppercase;">MESSAGE ON WHATSAPP</a>
+                </div>
+                <p style="font-size:10px; color:rgba(255,255,255,0.38); letter-spacing:1.5px; margin-top:12px;">Free consultation</p>
             </div>
         </div>
 
@@ -1595,7 +1582,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         </h2>
         <div class="text-[13px] text-gray-500 leading-[1.8] font-light space-y-2">
             <p>Planning from abroad shouldn't feel complicated.</p>
-            <p>At Kai Events, I craft every detail with precision — so you stay present, completely at ease.</p>
+            <p>At Kai Events, We craft every detail with precision — so you stay present, completely at ease.</p>
         </div>
 
         <!-- FEAR BUSTER -->
@@ -1645,6 +1632,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
 </div>
 
+<!-- ===== INTRO SECTION ===== -->
+<section style="max-width: 900px; margin: 60px auto; padding: 0 40px; text-align: center;">
+    <p style="font-size: 17px; line-height: 1.8; color: #666; max-width: 800px; margin: 0 auto; font-weight: 300;">
+        We create destination weddings where every element feels considered, personal and effortless — from the setting to the entire guest experience.
+    </p>
+</section>
+
 <!-- ===== ABOUT / DESKTOP ONLY ===== -->
 <section id="about-contact" class="relative py-4 md:pt-20 md:pb-0 bg-white">
     <div class="max-w-6xl mx-auto px-8 relative">
@@ -1664,11 +1658,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
                     Your Wedding.<br>Fully Taken Care Of.
                 </h2>
                 <div class="space-y-4 mb-6">
+                    <p class="text-[15px] md:text-[16px] text-[#444] leading-[1.9] font-light">We handle every detail so you can focus on celebrating.</p>
                     <p class="text-[15px] md:text-[16px] text-[#444] leading-[1.9] font-light">
-                        Planning from abroad shouldn't feel complicated.
-                    </p>
-                    <p class="text-[15px] md:text-[16px] text-[#444] leading-[1.9] font-light">
-                        At Kai Events, I craft every detail with precision — so you stay present, completely at ease.
+                        At Kai Events, We craft every detail with precision — so you stay present, completely at ease.
                     </p>
                 </div>
 
@@ -1703,6 +1695,70 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
 </section>
 
+<!-- ===== TESTIMONIALS ===== -->
+<section id="testimonials" class="py-16 md:py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-6 md:px-8">
+        <div class="text-center mb-12">
+            <h2 class="font-serif text-[28px] md:text-[36px] mb-4 text-[#1a1a1a]">What Couples Say</h2>
+            <p class="text-gray-500 text-[15px]">Real moments from couples we've had the privilege to work with</p>
+        </div>
+
+        <!-- TESTIMONIALS GRID -->
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Testimonial 1 -->
+            <div class="bg-[#fcfcfb] p-8 rounded-lg border border-gray-100">
+                <div class="flex items-center gap-1 mb-4">
+                    <span class="text-[#a19273]">★</span><span class="text-[#a19273]">★</span><span class="text-[#a19273]">★</span><span class="text-[#a19273]">★</span><span class="text-[#a19273]">★</span>
+                </div>
+                <p class="text-[15px] text-gray-600 leading-relaxed mb-6 italic">
+                    "Noam's attention to every single detail was incredible. From the moment we met, I knew we were in the right hands. Our day in Cyprus was absolutely perfect — our guests still talk about it. She didn't just plan a wedding; she created an unforgettable experience."
+                </p>
+                <div>
+                    <div style="display: flex; align-items: center; gap: 12px;">
+    <div style="width: 55px; height: 55px; border-radius: 50%; background: linear-gradient(135deg, #c9b8a3, #dcc9b3); display: flex; align-items: center; justify-content: center; font-size: 24px; color: #a19273; flex-shrink: 0;">👰</div>
+    <h4 class="font-serif text-[16px] text-[#1a1a1a] font-medium">Sarah & Michael Chen</h4>
+  </div>
+                    <p class="text-[12px] text-[#a19273] tracking-[1px] uppercase">Santorini, Greece · 2023</p>
+                </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="bg-[#fcfcfb] p-8 rounded-lg border border-gray-100">
+                <div class="flex items-center gap-1 mb-4">
+                    <span class="text-[#a19273]">★</span><span class="text-[#a19273]">★</span><span class="text-[#a19273]">★</span><span class="text-[#a19273]">★</span><span class="text-[#a19273]">★</span>
+                </div>
+                <p class="text-[15px] text-gray-600 leading-relaxed mb-6 italic">
+                    "We planned our entire wedding from abroad and honestly had zero stress. Noam handled everything with such care and professionalism. It was seamless, beautiful, and exactly what we dreamed of. She made us feel like family, not just clients."
+                </p>
+                <div>
+                    <div style="display: flex; align-items: center; gap: 12px;">
+    <div style="width: 55px; height: 55px; border-radius: 50%; background: linear-gradient(135deg, #c9b8a3, #dcc9b3); display: flex; align-items: center; justify-content: center; font-size: 24px; color: #a19273; flex-shrink: 0;">👰</div>
+    <h4 class="font-serif text-[16px] text-[#1a1a1a] font-medium">Emma & James Roberts</h4>
+  </div>
+                    <p class="text-[12px] text-[#a19273] tracking-[1px] uppercase">Paphos, Cyprus · 2023</p>
+                </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="bg-[#fcfcfb] p-8 rounded-lg border border-gray-100">
+                <div class="flex items-center gap-1 mb-4">
+                    <span class="text-[#a19273]">★</span><span class="text-[#a19273]">★</span><span class="text-[#a19273]">★</span><span class="text-[#a19273]">★</span><span class="text-[#a19273]">★</span>
+                </div>
+                <p class="text-[15px] text-gray-600 leading-relaxed mb-6 italic">
+                    "Our Tuscany wedding was a dream come true. Every detail was thoughtfully planned, the vendors were incredible, and Noam was present throughout to make sure everything flowed perfectly. The way she managed the moving parts — 200 guests, multiple locations, different timezones — was masterful. Highly recommend."
+                </p>
+                <div>
+                    <div style="display: flex; align-items: center; gap: 12px;">
+    <div style="width: 55px; height: 55px; border-radius: 50%; background: linear-gradient(135deg, #c9b8a3, #dcc9b3); display: flex; align-items: center; justify-content: center; font-size: 24px; color: #a19273; flex-shrink: 0;">👰</div>
+    <h4 class="font-serif text-[16px] text-[#1a1a1a] font-medium">Lisa & David Moretti</h4>
+  </div>
+                    <p class="text-[12px] text-[#a19273] tracking-[1px] uppercase">Tuscany, Italy · 2024</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- ===== SERVICES ===== -->
 <section id="services" class="py-4 md:py-24 bg-white">
     <div class="max-w-6xl mx-auto px-6 md:px-8 text-center">
@@ -1718,12 +1774,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             <div class="group bg-[#fcfcfb] p-5 md:p-6 rounded-sm shadow-[0_6px_20px_rgba(0,0,0,0.03)] transition-all duration-300 hover:shadow-[0_12px_30px_rgba(0,0,0,0.06)]">
                 <div class="w-full h-[300px] md:h-[340px] overflow-hidden mb-5"><img src="pictures/SERVICES/1.webp" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"></div>
                 <h3 class="font-serif text-[18px] md:text-[20px] mb-2 text-[#1a1a1a] font-medium">Full Wedding Planning</h3>
-                <p class="font-serif text-[14px] md:text-[15px] text-gray-500 leading-relaxed px-2">From first idea to wedding day — entirely managed.</p>
+                <p class="font-serif text-[14px] md:text-[15px] text-gray-500 leading-relaxed px-2">We craft every moment of your wedding — from concept through day-of execution.</p>
             </div>
             <div class="group bg-[#fcfcfb] p-5 md:p-6 rounded-sm shadow-[0_6px_20px_rgba(0,0,0,0.03)] transition-all duration-300 hover:shadow-[0_12px_30px_rgba(0,0,0,0.06)]">
                 <div class="w-full h-[300px] md:h-[340px] overflow-hidden mb-5"><img src="pictures/SERVICES/2.jpg" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"></div>
                 <h3 class="font-serif text-[18px] md:text-[20px] mb-2 text-[#1a1a1a] font-medium">Wedding Production</h3>
-                <p class="font-serif text-[14px] md:text-[15px] text-gray-500 leading-relaxed px-2">Multi-day celebrations, fully coordinated abroad.</p>
+                <p class="font-serif text-[14px] md:text-[15px] text-gray-500 leading-relaxed px-2">Multi-day celebrations, rehearsal dinners, welcome brunches — fully orchestrated across locations.</p>
             </div>
             <div class="group bg-[#fcfcfb] p-5 md:p-6 rounded-sm shadow-[0_6px_20px_rgba(0,0,0,0.03)] transition-all duration-300 hover:shadow-[0_12px_30px_rgba(0,0,0,0.06)]">
                 <div class="w-full h-[300px] md:h-[340px] overflow-hidden mb-5"><img src="pictures/SERVICES/3.jpg" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"></div>
@@ -1900,7 +1956,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             <div class="process-step flex flex-col items-start w-full md:max-w-[18%]">
                 <span class="step-number text-[36px] text-[#a19273] italic">05</span>
                 <h3 class="step-title text-[14px] tracking-[1.5px] uppercase font-bold mb-3 text-[#1a1a1a] flex items-center whitespace-nowrap">Stress-Free</h3>
-                <p class="text-[14px] leading-[1.8] text-gray-600 font-light">You stay present. We handle everything else.</p>
+                <p class="text-[14px] leading-[1.8] text-gray-600 font-light">You stay present. We craft the magic.</p>
             </div>
         </div>
 
@@ -1924,7 +1980,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             </div>
             <div class="flex items-start gap-4 py-5">
                 <span class="text-[38px] text-[#a19273] italic leading-none w-[48px] flex-shrink-0">05</span>
-                <div><h3 class="text-[12px] tracking-[1.5px] uppercase font-bold mb-1 text-[#1a1a1a]">Stress-Free</h3><p style="font-size:13px !important;" class="leading-[1.7] text-gray-600 font-light">You stay present. We handle everything else.</p></div>
+                <div><h3 class="text-[12px] tracking-[1.5px] uppercase font-bold mb-1 text-[#1a1a1a]">Stress-Free</h3><p style="font-size:13px !important;" class="leading-[1.7] text-gray-600 font-light">You stay present. We craft the magic.</p></div>
             </div>
         </div>
 
@@ -2276,6 +2332,91 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
      DESTINATIONS POLISH END
      ============================================================ -->
 
+
+
+<!-- ===== ABOUT NOAM ===== -->
+<section id="about-noam" class="py-16 md:py-24 bg-[#fcfcfb]">
+    <div class="max-w-6xl mx-auto px-6 md:px-8">
+        <!-- MOBILE -->
+        <div class="md:hidden text-center mb-8">
+            <img src="uploads/Noam%20profile.jpg" alt="Noam Salach" class="w-full max-w-[300px] mx-auto rounded-lg object-cover aspect-square mb-6">
+            <h2 class="font-serif text-[28px] mb-4 text-[#1a1a1a]">About KAI</h2>
+            <p class="text-[15px] text-gray-600 leading-relaxed mb-4">
+                With 15+ years of luxury event production experience, We craft destination wedding experiences that feel deeply personal and completely seamless. We've learned that the best weddings aren't just beautiful — they're deeply connected to who you are.
+            </p>
+            <p class="text-[15px] text-gray-600 leading-relaxed mb-4">
+                What began as a passion for bringing visions to life has evolved into a mission: helping couples celebrate their love in the world's most beautiful locations without the stress. Every wedding We orchestrate reflects the couple's story, their values, and their dreams — because your day should feel uniquely yours, not generic.
+            </p>
+            <p class="text-[15px] text-gray-600 leading-relaxed mb-6">
+                We specialize in full destination planning — from Greece and Cyprus to Italy, France, and beyond. We take on a limited number of weddings each year to ensure every couple gets complete attention. My approach is simple: We listen deeply to understand your vision, We plan meticulously to handle every detail, and We execute flawlessly so you can simply enjoy the day.
+            </p>
+            <a href="https://calendly.com/htnoam/30min" target="_blank" class="gold-button !text-[11px] !tracking-[3px]">Book a Discovery Call</a>
+        </div>
+
+        <!-- DESKTOP -->
+        <div class="hidden md:grid grid-cols-2 gap-12 items-center">
+            <div>
+                <img src="uploads/Noam%20profile.jpg" alt="Noam Salach" class="w-full rounded-lg object-cover aspect-square">
+            </div>
+            <div>
+                <h2 class="font-serif text-[40px] mb-6 text-[#1a1a1a] leading-[1.2]">About KAI</h2>
+                <p class="text-[16px] text-gray-600 leading-relaxed mb-4 font-light">
+                    With 15+ years of luxury event production experience, We craft destination wedding experiences that feel deeply personal and completely seamless.
+                </p>
+                <p class="text-[16px] text-gray-600 leading-relaxed mb-4 font-light">
+                    What began as a passion for bringing visions to life has evolved into a mission: helping couples celebrate their love in the world's most beautiful locations. Every wedding We orchestrate reflects the couple's story, their values, and their dreams.
+                </p>
+                <p class="text-[16px] text-gray-600 leading-relaxed mb-6 font-light">
+                    We specialize in full destination planning — from Greece and Cyprus to Italy, France, and beyond. We take on a limited number of weddings each year to ensure nothing is overlooked. My approach is simple: We listen deeply, We plan meticulously, and We execute flawlessly.
+                </p>
+                <a href="https://calendly.com/htnoam/30min" target="_blank" class="gold-button !text-[11px] !tracking-[3px]">Book a Discovery Call</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== TEAM ===== -->
+<section id="team" class="py-16 md:py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-6 md:px-8">
+        <div class="text-center mb-12">
+            <h2 class="font-serif text-[28px] md:text-[36px] mb-4 text-[#1a1a1a]">Our Team</h2>
+            <p class="text-gray-500 text-[15px]">Experts dedicated to creating unforgettable celebrations</p>
+        </div>
+
+        <!-- TEAM GRID -->
+        <div class="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+            <!-- Noam -->
+            <div class="text-center">
+                <div class="mb-6 w-full max-w-[280px] mx-auto">
+                    <img src="uploads/Noam%20profile.jpg" alt="Noam Salach" class="w-full rounded-lg object-cover aspect-square">
+                </div>
+                <h3 class="font-serif text-[22px] text-[#1a1a1a] mb-1">Noam Salach</h3>
+                <p class="text-[#a19273] text-[13px] tracking-[1px] uppercase font-medium mb-3">Founder & Lead Planner</p>
+                <p class="text-gray-600 text-[14px] leading-relaxed">
+                    With 15+ years in luxury event production, Noam brings vision and precision to every wedding. She specializes in full destination planning across Europe and beyond, ensuring every detail reflects each couple's unique story.
+                </p>
+            </div>
+
+            <!-- Co-founder/Team -->
+            <div class="text-center">
+                <div class="mb-6 w-full max-w-[280px] mx-auto bg-gradient-to-br from-[#a19273] to-[#8e7f5e] rounded-lg aspect-square flex items-center justify-center">
+                    <div class="text-white text-center">
+                        <i class="fas fa-users text-[48px] mb-2"></i>
+                        <p class="text-[14px]">Experienced Team of Coordinators & Designers</p>
+                    </div>
+                </div>
+                <h3 class="font-serif text-[22px] text-[#1a1a1a] mb-1">Our Team</h3>
+                <p class="text-[#a19273] text-[13px] tracking-[1px] uppercase font-medium mb-3">Logistics & Production</p>
+                <p class="text-gray-600 text-[14px] leading-relaxed">
+                    A dedicated team of coordinators, designers, and logistics specialists who pour their hearts into every detail. From venue sourcing to on-the-day coordination, we craft every moment so you stay stress-free.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
 <!-- ===== EMOTIONAL STATEMENT ===== -->
 <div class="block md:hidden bg-[#f8f6f2] px-6 py-6 text-center" style="margin-bottom: 30px;">
     <div class="h-[1px] bg-[#a19273] opacity-20 mb-4 mx-auto w-10"></div>
@@ -2311,7 +2452,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
                 <span class="faq-icon text-[#a19273] text-[18px] flex-shrink-0 transition-transform duration-300">+</span>
             </button>
             <div class="faq-a hidden pb-4">
-                <p style="font-size:13px !important;" class="text-gray-500 font-light leading-relaxed">Yes — most of our couples plan their wedding entirely remotely. We handle everything on the ground and keep you updated at every step. You'll feel like you're right here with us.</p>
+                <p style="font-size:13px !important;" class="text-gray-500 font-light leading-relaxed">Yes — most of our couples plan remotely. We orchestrate everything on the ground with precision and passion and keep you updated at every step. You'll feel like you're right here with us.</p>
             </div>
         </div>
 
@@ -2374,7 +2515,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
                         <span class="faq-icon text-[#a19273] text-[20px] flex-shrink-0">+</span>
                     </button>
                     <div class="faq-a hidden pb-5">
-                        <p class="text-gray-500 font-light leading-relaxed text-[14px]">Yes — most of our couples plan their wedding entirely remotely. We handle everything on the ground and keep you updated at every step. You'll feel like you're right here with us.</p>
+                        <p class="text-gray-500 font-light leading-relaxed text-[14px]">Yes — most of our couples plan remotely. We orchestrate everything on the ground with precision and passion and keep you updated at every step. You'll feel like you're right here with us.</p>
                     </div>
                 </div>
                 <div style="border-bottom: 1px solid #f3f0ec;">
@@ -2446,6 +2587,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
                     <input type="tel" id="phone3" name="phone" placeholder="Phone Number (optional)" autocomplete="tel" class="w-full bg-[#ffffff] border border-[#dcdcdc] py-[14px] md:py-[16px] px-[16px] md:px-[18px] rounded-[6px] text-[14px] text-[#1a1a1a] outline-none focus:border-[#000] transition-all duration-300 placeholder:text-[#999]">
                     <span style="position: absolute; right: 14px; top: 50%; transform: translateY(-50%); font-size: 10px; color: #ccc; letter-spacing: 0.5px; pointer-events: none;">optional</span>
                 </div>
+                <input type="number" name="guests" placeholder="Number of guests" min="1" class="w-full bg-[#ffffff] border border-[#dcdcdc] py-[14px] md:py-[16px] px-[16px] md:px-[18px] rounded-[6px] text-[14px] text-[#1a1a1a] outline-none focus:border-[#000] transition-all duration-300 placeholder:text-[#999]">
+                <input type="text" name="destination" placeholder="Destination" class="w-full bg-[#ffffff] border border-[#dcdcdc] py-[14px] md:py-[16px] px-[16px] md:px-[18px] rounded-[6px] text-[14px] text-[#1a1a1a] outline-none focus:border-[#000] transition-all duration-300 placeholder:text-[#999]">
+                <textarea name="message" placeholder="Message" rows="6" class="w-full bg-[#ffffff] border border-[#dcdcdc] py-[14px] md:py-[16px] px-[16px] md:px-[18px] rounded-[6px] text-[14px] text-[#1a1a1a] outline-none focus:border-[#000] transition-all duration-300 placeholder:text-[#999] resize-none"></textarea>
                 <div class="text-left">
                     <label class="flex items-start gap-2 cursor-pointer">
                         <input type="checkbox" name="consent" required class="mt-1 accent-[#a19273]">
@@ -2550,7 +2694,7 @@ function toggleFaq(btn) {
 <style>
     .header {
         position: fixed;
-        background: #f5f3ef;
+        background: rgba(245, 243, 239, 0.5);
         top: 0;
         left: 0;
         width: 100%;
@@ -2609,7 +2753,7 @@ function toggleFaq(btn) {
 
     .header.scrolled {
         height: 50px;
-        background: #f5f3ef;
+        background: rgba(245, 243, 239, 0.5);
         backdrop-filter: blur(12px);
         border-bottom: 1px solid rgba(0,0,0,0.05);
     }
