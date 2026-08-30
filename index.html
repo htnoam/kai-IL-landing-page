@@ -42,8 +42,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             margin: 0; 
             scroll-behavior: smooth; 
             -webkit-font-smoothing: antialiased;
-            font-size: 16px;
-            line-height: 1.65;
+            font-size: 13px;
+            line-height: 1.6;
         }
 
         .font-serif { font-family: 'Playfair Display', serif; font-variant-ligatures: none; }
@@ -53,7 +53,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         .reveal { opacity: 0; transform: translateY(20px); transition: all 0.8s ease-out; }
         .reveal.active { opacity: 1; transform: translateY(0); }
 
-        .hero p { font-size: 18px; line-height: 1.7; max-width: 640px; }
+        .hero p { font-size: 14px; line-height: 1.7; max-width: 640px; }
 
         header {
             position: fixed;
@@ -64,12 +64,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 30px 60px;
+            padding: 14px 48px;
         }
 
         header.scrolled {
             background-color: rgba(255, 255, 255, 0.5);
-            padding: 15px 60px;
+            padding: 9px 48px;
             box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
         }
 
@@ -89,7 +89,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         .gold-button {
             background-color: var(--brand-gold);
             color: white;
-            padding: 18px 45px;
+            padding: 10px 28px;
             font-size: 14px;
             letter-spacing: 2px;
             text-transform: uppercase;
@@ -230,7 +230,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             .whatsapp-btn { display: none !important; }
         }
 
-        .gallery-grid-refined { display: grid; grid-template-columns: repeat(1, 1fr); gap: 24px; max-width: 1200px; margin: 0 auto; }
+        .gallery-grid-refined { display: grid; grid-template-columns: repeat(1, 1fr); gap: 16px; max-width: 1100px; margin: 0 auto; }
         @media (min-width: 768px) { .gallery-grid-refined { grid-template-columns: repeat(3, 1fr); } }
 
         .gallery-img-wrapper { position: relative; overflow: hidden; aspect-ratio: 4/5; background-color: #f2f2f2; border-radius: 2px; }
@@ -239,7 +239,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         #destinations-editorial {
             background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/ec/World_map_blank_without_borders.svg');
             background-repeat: no-repeat; background-position: center -25%; background-size: 95%;
-            padding: 160px 20px 140px; position: relative;
+            padding: 80px 20px 70px; position: relative;
         }
         #destinations-editorial::after {
             content: ""; position: absolute; inset: 0;
@@ -252,7 +252,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         .editorial-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 60px; max-width: 1200px; margin: 40px auto 0; }
 
         .editorial-item { cursor: pointer; transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1); position: relative; text-align: center; min-width: 120px; transform-origin: center; }
-        .editorial-name { font-family: 'Playfair Display', serif; font-size: 35px; color: #1a1a1a; margin-bottom: 5px; font-weight: 400; transition: all 0.5s ease; letter-spacing: 0px; }
+        .editorial-name { font-family: 'Playfair Display', serif; font-size: 22px; color: #1a1a1a; margin-bottom: 5px; font-weight: 400; transition: all 0.5s ease; letter-spacing: 0px; }
         .editorial-desc { font-family: 'Montserrat', sans-serif; font-size: 13px; color: #666; font-weight: 300; letter-spacing: 0.5px; transition: all 0.5s ease; min-width: 150px; max-width: 200px; margin: 0 auto; line-height: 1.6; }
         .editorial-grid:hover .editorial-item { opacity: 0.4; }
         .editorial-item:hover { opacity: 1 !important; transform: scale(1.12); }
@@ -260,7 +260,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         .editorial-item:hover .editorial-desc { color: var(--text-dark); }
 
         .cta-button {
-            background: #a19273; color: white; padding: 18px 42px; font-size: 13px;
+            background: #a19273; color: white; padding: 10px 28px; font-size: 13px;
             letter-spacing: 0.16em; text-transform: uppercase; font-weight: 500;
             border: 1px solid transparent; border-radius: 4px; transition: all 0.35s ease;
             position: relative; overflow: hidden;
@@ -273,11 +273,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         .cta-link:hover { letter-spacing: 0.18em; transform: translateY(-1px); }
         .cta-link:hover::after { transform: scaleX(1); }
 
-        p { font-size: 16px; line-height: 1.7; color: #444444; }
+        p { font-size: 13px; line-height: 1.7; color: #444444; }
         .hero h1 { letter-spacing: -0.3px; }
         .section-title-container h2, #gallery h2, #destinations-editorial h2 { letter-spacing: 0.18em; }
         #destinations-editorial p { font-size: 15px; line-height: 1.6; }
-        #services h3 { font-size: 22px; margin-top: 14px; }
+        #services h3 { font-size: 16px; margin-top: 10px; }
         #services p { font-size: 15.5px; line-height: 1.7; }
         #about-contact p { line-height: 1.75; }
         #final-contact-section input { font-size: 15px; }
@@ -1474,12 +1474,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 
         <!-- DESKTOP -->
         <div class="hidden md:block">
-            <p class="text-[11px] tracking-[5px] uppercase text-white/55 mb-6 font-light">Europe & Beyond · Destination Weddings</p>
-            <h1 class="font-serif text-[54px] text-white mb-5 leading-[1.15] reveal active" style="letter-spacing: -0.5px;">
+            <p class="text-[10px] tracking-[4px] uppercase text-white/55 mb-4 font-light">Europe & Beyond · Destination Weddings</p>
+            <h1 class="font-serif text-[38px] text-white mb-3 leading-[1.15] reveal active" style="letter-spacing: -0.5px;">
                 Luxury Destination Weddings
             </h1>
             <div style="width: 40px; height: 1px; background: rgba(161,146,115,0.7); margin: 0 auto 26px;"></div>
-            <p class="text-[15px] text-white/80 font-light mb-10 max-w-[400px] mx-auto leading-[2] reveal active">
+            <p class="text-[13px] text-white/80 font-light mb-6 max-w-[380px] mx-auto leading-[1.8] reveal active">
                 Every detail handled.<br>Every moment considered.<br>Every wedding, entirely yours.
             </p>
             <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
@@ -1633,8 +1633,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </div>
 
 <!-- ===== ABOUT / DESKTOP ONLY ===== -->
-<section id="about-contact" class="relative py-4 md:pt-20 md:pb-0 bg-white">
-    <div class="max-w-6xl mx-auto px-8 relative">
+<section id="about-contact" class="relative py-4 md:pt-12 md:pb-0 bg-white">
+    <div class="max-w-5xl mx-auto px-8 relative">
         <div class="block md:hidden"></div>
         <div class="hidden md:block">
             <div class="relative w-full md:w-[70%]">
@@ -1643,16 +1643,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
                 </div>
                 <div class="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent rounded-[12px] pointer-events-none"></div>
             </div>
-            <div class="relative md:absolute md:top-1/2 md:right-[-40px] md:-translate-y-1/2 bg-[#f8f6f2] p-10 md:p-14 rounded-[14px] shadow-[0_30px_80px_rgba(0,0,0,0.12)] max-w-[540px] mt-10 md:mt-0">
+            <div class="relative md:absolute md:top-1/2 md:right-[-40px] md:-translate-y-1/2 bg-[#f8f6f2] p-6 md:p-8 rounded-[14px] shadow-[0_30px_80px_rgba(0,0,0,0.12)] max-w-[540px] mt-10 md:mt-0">
                 <p class="text-[11px] tracking-[6px] uppercase text-[#a19273] mb-5">
                     <span class="whitespace-nowrap">Destination Weddings</span> in Europe
                 </p>
-                <h2 class="font-serif text-[36px] md:text-[34px] leading-[1.2] mb-6 text-[#1a1a1a]">
+                <h2 class="font-serif text-[24px] md:text-[24px] leading-[1.2] mb-4 text-[#1a1a1a]">
                     Your Wedding.<br>Fully Taken Care Of.
                 </h2>
                 <div class="space-y-4 mb-6">
-                    <p class="text-[15px] md:text-[16px] text-[#444] leading-[1.9] font-light">We handle every detail so you can focus on celebrating.</p>
-                    <p class="text-[15px] md:text-[16px] text-[#444] leading-[1.9] font-light">
+                    <p class="text-[13px] md:text-[13px] text-[#444] leading-[1.8] font-light">We handle every detail so you can focus on celebrating.</p>
+                    <p class="text-[13px] md:text-[13px] text-[#444] leading-[1.8] font-light">
                         At Kai Events, We craft every detail with precision — so you stay present, completely at ease.
                     </p>
                 </div>
@@ -1689,10 +1689,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </section>
 
 <!-- ===== TESTIMONIALS ===== -->
-<section id="testimonials" class="py-16 md:py-24 bg-white">
-    <div class="max-w-6xl mx-auto px-6 md:px-8">
+<section id="testimonials" class="py-8 md:py-12 bg-white">
+    <div class="max-w-5xl mx-auto px-6 md:px-8">
         <div class="text-center mb-12">
-            <h2 class="font-serif text-[28px] md:text-[36px] mb-4 text-[#1a1a1a]">What Couples Say</h2>
+            <h2 class="font-serif text-[20px] md:text-[24px] mb-3 text-[#1a1a1a]">What Couples Say</h2>
             <p class="text-gray-500 text-[15px]">Real moments from couples we've had the privilege to work with</p>
         </div>
 
@@ -1753,46 +1753,46 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </section>
 
 <!-- ===== SERVICES ===== -->
-<section id="services" class="py-4 md:py-24 bg-white">
-    <div class="max-w-6xl mx-auto px-6 md:px-8 text-center">
+<section id="services" class="py-4 md:py-10 bg-white">
+    <div class="max-w-5xl mx-auto px-6 md:px-8 text-center">
 
         <div class="section-title-container mb-8 md:mb-12">
             <div class="title-line"></div>
-            <h2 class="font-serif text-[20px] md:text-[28px] text-[#1a1a1a] tracking-[0.2em] uppercase">Our Services</h2>
+            <h2 class="font-serif text-[16px] md:text-[20px] text-[#1a1a1a] tracking-[0.2em] uppercase">Our Services</h2>
             <div class="title-line"></div>
         </div>
 
         <!-- DESKTOP -->
         <div class="hidden md:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 md:gap-x-10 gap-y-8 md:gap-y-10">
             <div class="group bg-[#fcfcfb] p-5 md:p-6 rounded-sm shadow-[0_6px_20px_rgba(0,0,0,0.03)] transition-all duration-300 hover:shadow-[0_12px_30px_rgba(0,0,0,0.06)]">
-                <div class="w-full h-[300px] md:h-[340px] overflow-hidden mb-5"><img src="pictures/SERVICES/1.webp" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"></div>
-                <h3 class="font-serif text-[18px] md:text-[20px] mb-2 text-[#1a1a1a] font-medium">Full Wedding Planning</h3>
-                <p class="font-serif text-[14px] md:text-[15px] text-gray-500 leading-relaxed px-2">We craft every moment of your wedding — from concept through day-of execution.</p>
+                <div class="w-full h-[200px] md:h-[220px] overflow-hidden mb-5"><img src="pictures/SERVICES/1.webp" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"></div>
+                <h3 class="font-serif text-[15px] md:text-[16px] mb-1 text-[#1a1a1a] font-medium">Full Wedding Planning</h3>
+                <p class="font-serif text-[12px] md:text-[13px] text-gray-500 leading-relaxed px-2">We craft every moment of your wedding — from concept through day-of execution.</p>
             </div>
             <div class="group bg-[#fcfcfb] p-5 md:p-6 rounded-sm shadow-[0_6px_20px_rgba(0,0,0,0.03)] transition-all duration-300 hover:shadow-[0_12px_30px_rgba(0,0,0,0.06)]">
-                <div class="w-full h-[300px] md:h-[340px] overflow-hidden mb-5"><img src="pictures/SERVICES/2.jpg" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"></div>
-                <h3 class="font-serif text-[18px] md:text-[20px] mb-2 text-[#1a1a1a] font-medium">Wedding Production</h3>
-                <p class="font-serif text-[14px] md:text-[15px] text-gray-500 leading-relaxed px-2">Multi-day celebrations, rehearsal dinners, welcome brunches — fully orchestrated across locations.</p>
+                <div class="w-full h-[200px] md:h-[220px] overflow-hidden mb-5"><img src="pictures/SERVICES/2.jpg" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"></div>
+                <h3 class="font-serif text-[15px] md:text-[16px] mb-1 text-[#1a1a1a] font-medium">Wedding Production</h3>
+                <p class="font-serif text-[12px] md:text-[13px] text-gray-500 leading-relaxed px-2">Multi-day celebrations, rehearsal dinners, welcome brunches — fully orchestrated across locations.</p>
             </div>
             <div class="group bg-[#fcfcfb] p-5 md:p-6 rounded-sm shadow-[0_6px_20px_rgba(0,0,0,0.03)] transition-all duration-300 hover:shadow-[0_12px_30px_rgba(0,0,0,0.06)]">
-                <div class="w-full h-[300px] md:h-[340px] overflow-hidden mb-5"><img src="pictures/SERVICES/3.jpg" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"></div>
-                <h3 class="font-serif text-[18px] md:text-[20px] mb-2 text-[#1a1a1a] font-medium">Venue & Supplier Sourcing</h3>
-                <p class="font-serif text-[14px] md:text-[15px] text-gray-500 leading-relaxed px-2">Exceptional venues and trusted partners, hand-selected.</p>
+                <div class="w-full h-[200px] md:h-[220px] overflow-hidden mb-5"><img src="pictures/SERVICES/3.jpg" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"></div>
+                <h3 class="font-serif text-[15px] md:text-[16px] mb-1 text-[#1a1a1a] font-medium">Venue & Supplier Sourcing</h3>
+                <p class="font-serif text-[12px] md:text-[13px] text-gray-500 leading-relaxed px-2">Exceptional venues and trusted partners, hand-selected.</p>
             </div>
             <div class="group bg-[#fcfcfb] p-5 md:p-6 rounded-sm shadow-[0_6px_20px_rgba(0,0,0,0.03)] transition-all duration-300 hover:shadow-[0_12px_30px_rgba(0,0,0,0.06)]">
-                <div class="w-full h-[300px] md:h-[340px] overflow-hidden mb-5"><img src="pictures/SERVICES/4.webp" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"></div>
-                <h3 class="font-serif text-[18px] md:text-[20px] mb-2 text-[#1a1a1a] font-medium">Design & Guest Experience</h3>
-                <p class="font-serif text-[14px] md:text-[15px] text-gray-500 leading-relaxed px-2">A cohesive vision — from aesthetic to atmosphere.</p>
+                <div class="w-full h-[200px] md:h-[220px] overflow-hidden mb-5"><img src="pictures/SERVICES/4.webp" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"></div>
+                <h3 class="font-serif text-[15px] md:text-[16px] mb-1 text-[#1a1a1a] font-medium">Design & Guest Experience</h3>
+                <p class="font-serif text-[12px] md:text-[13px] text-gray-500 leading-relaxed px-2">A cohesive vision — from aesthetic to atmosphere.</p>
             </div>
             <div class="group bg-[#fcfcfb] p-5 md:p-6 rounded-sm shadow-[0_6px_20px_rgba(0,0,0,0.03)] transition-all duration-300 hover:shadow-[0_12px_30px_rgba(0,0,0,0.06)]">
-                <div class="w-full h-[300px] md:h-[340px] overflow-hidden mb-5"><img src="pictures/SERVICES/5.jpg" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"></div>
-                <h3 class="font-serif text-[18px] md:text-[20px] mb-2 text-[#1a1a1a] font-medium">Logistics Management</h3>
-                <p class="font-serif text-[14px] md:text-[15px] text-gray-500 leading-relaxed px-2">Timelines, transport, operations — seamless end to end.</p>
+                <div class="w-full h-[200px] md:h-[220px] overflow-hidden mb-5"><img src="pictures/SERVICES/5.jpg" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"></div>
+                <h3 class="font-serif text-[15px] md:text-[16px] mb-1 text-[#1a1a1a] font-medium">Logistics Management</h3>
+                <p class="font-serif text-[12px] md:text-[13px] text-gray-500 leading-relaxed px-2">Timelines, transport, operations — seamless end to end.</p>
             </div>
             <div class="group bg-[#fcfcfb] p-5 md:p-6 rounded-sm shadow-[0_6px_20px_rgba(0,0,0,0.03)] transition-all duration-300 hover:shadow-[0_12px_30px_rgba(0,0,0,0.06)]">
-                <div class="w-full h-[300px] md:h-[340px] overflow-hidden mb-5"><img src="pictures/SERVICES/6.jpg" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"></div>
-                <h3 class="font-serif text-[18px] md:text-[20px] mb-2 text-[#1a1a1a] font-medium">On-Site Coordination</h3>
-                <p class="font-serif text-[14px] md:text-[15px] text-gray-500 leading-relaxed px-2">Full presence on the day — so you don't have to think about a thing.</p>
+                <div class="w-full h-[200px] md:h-[220px] overflow-hidden mb-5"><img src="pictures/SERVICES/6.jpg" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"></div>
+                <h3 class="font-serif text-[15px] md:text-[16px] mb-1 text-[#1a1a1a] font-medium">On-Site Coordination</h3>
+                <p class="font-serif text-[12px] md:text-[13px] text-gray-500 leading-relaxed px-2">Full presence on the day — so you don't have to think about a thing.</p>
             </div>
         </div>
 
@@ -1943,7 +1943,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </section>
 
 <!-- ===== WHY CHOOSE US ===== -->
-<div class="py-16 md:py-24 bg-[#fcfcfb]">
+<div class="py-8 md:py-12 bg-[#fcfcfb]">
     <div class="max-w-7xl mx-auto px-6 md:px-8">
         <div class="text-center mb-10 md:mb-16">
             <div class="flex items-center justify-center gap-5 mb-3">
@@ -2008,8 +2008,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 
 
 <!-- ===== GALLERY ===== -->
-<section id="gallery" class="py-12 md:py-20 bg-white">
-    <div class="max-w-6xl mx-auto px-6 md:px-8">
+<section id="gallery" class="py-8 md:py-12 bg-white">
+    <div class="max-w-5xl mx-auto px-6 md:px-8">
         <div class="text-center mb-8 md:mb-10">
             <div class="flex items-center justify-center gap-5 mb-3">
                 <div class="h-[1px] w-10 bg-[#a19273] opacity-30"></div>
@@ -2301,8 +2301,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 
 
 <!-- ===== ABOUT NOAM ===== -->
-<section id="about-noam" class="py-16 md:py-24 bg-[#fcfcfb]">
-    <div class="max-w-6xl mx-auto px-6 md:px-8">
+<section id="about-noam" class="py-8 md:py-12 bg-[#fcfcfb]">
+    <div class="max-w-5xl mx-auto px-6 md:px-8">
         <!-- MOBILE -->
         <div class="md:hidden text-center mb-8">
             <img src="uploads/Noam%20profile.jpg" alt="Noam Salach" class="w-full max-w-[300px] mx-auto rounded-lg object-cover aspect-square mb-6">
@@ -2484,7 +2484,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
 </div>
 
-<section id="final-contact-section" class="relative min-h-[100vh] flex items-start md:items-center justify-center py-[70px] md:py-[120px] md:mt-[60px] overflow-hidden">
+<section id="final-contact-section" class="relative min-h-[100vh] flex items-start md:items-center justify-center py-[40px] md:py-[70px] md:mt-[40px] overflow-hidden">
     <div class="absolute inset-0 z-0">
         <img src="pictures/contact/1.jpg" alt="Wedding Destination" class="w-full h-full object-cover object-center">
         <div class="absolute inset-0 bg-black/25"></div>
@@ -2494,7 +2494,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 
             <p class="text-[10px] tracking-[4px] uppercase text-[#a19273] mb-3">Begin Your Journey</p>
 
-            <h2 class="font-serif text-[26px] md:text-[42px] text-[#1a1a1a] leading-[1.2] tracking-[-0.01em] mb-[10px] md:mb-[16px]">
+            <h2 class="font-serif text-[20px] md:text-[28px] text-[#1a1a1a] leading-[1.2] tracking-[-0.01em] mb-[10px] md:mb-[16px]">
                 Let's Plan Your Wedding
             </h2>
 
@@ -2602,7 +2602,7 @@ function toggleFaq(btn) {
 
 <!-- ===== FOOTER ===== -->
 <footer id="footer" class="py-8 bg-white border-t border-gray-100 text-center">
-    <div class="max-w-6xl mx-auto px-8 flex flex-col items-center">
+    <div class="max-w-5xl mx-auto px-8 flex flex-col items-center">
 
         <img src="logo/logo_clear.png" alt="KAI Logo" class="h-12 md:h-20 object-contain mb-4 opacity-90">
 
